@@ -68,3 +68,11 @@ export type CohortRetentionRow = {
   cohortSize: number;
   retention: (number | null)[];
 };
+
+export type RevenueComparison = {
+  currentYear: string;
+  previousYear: string;
+  currentRevenue: number;
+  previousRevenue: number;
+  changePercentage: number;
+};

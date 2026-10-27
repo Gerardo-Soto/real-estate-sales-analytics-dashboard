@@ -12,6 +12,7 @@ import {
   calculateRevenueByChannel,
   calculateRevenueByCity,
   calculateRevenueByPropertyType,
+  calculateRevenueComparison,
   formatCurrency,
 } from "@/lib/analytics";
 
@@ -33,6 +34,7 @@ import RevenueByChannelChart from "@/components/charts/RevenueByChannelChart";
 import RevenueByPropertyTypeChart from "@/components/charts/RevenueByPropertyTypeChart";
 import BuyerProfileChart from "@/components/charts/BuyerProfileChart";
 import CohortRetentionHeatmap from "@/components/charts/CohortRetentionHeatmap";
+import ExecutiveInsights from "@/components/insights/ExecutiveInsights";
 
 import DashboardFilters from "@/components/filters/DashboardFilters";
 
@@ -57,6 +59,11 @@ export default function Home() {
 
   const [error, setError] =
     useState<string | null>(null);
+
+  function resetFilters() {
+    setSelectedCity("all");
+    setSelectedYear("all");
+  }
 
 
   useEffect(() => {
@@ -279,6 +286,14 @@ export default function Home() {
     [sales]
   );
 
+  const revenueComparison = useMemo(
+    () =>
+      calculateRevenueComparison(
+        sales
+      ),
+    [sales]
+  );
+
   useEffect(() => {
   if (sales.length === 0) {
     return;
@@ -338,20 +353,84 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 px-6 py-8">
       <div className="mx-auto max-w-7xl">
 
-        <header>
-          <p className="text-sm font-medium text-gray-500">
-            Real Estate Sales Analytics
+        <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+
+  <header>
+    <p className="text-sm font-medium text-gray-500">
+      Real Estate Sales Analytics
+    </p>
+
+    <h1 className="mt-1 text-3xl font-bold tracking-tight text-gray-900">
+      Desempeño Comercial
+    </h1>
+
+    <p className="mt-2 text-sm text-gray-500">
+      Análisis de ingresos, eficiencia comercial y desempeño de ventas.
+    </p>
+  </header>
+
+
+  {revenueComparison && (
+    <section className="min-w-[360px] rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
+
+      <p className="text-xs font-medium uppercase tracking-wide text-gray-400">
+        Comparación Anual
+      </p>
+
+      <div className="mt-3 flex items-end gap-6">
+
+        <div>
+          <p className="text-xs text-gray-400">
+            {revenueComparison.currentYear}
           </p>
 
-          <h1 className="mt-1 text-3xl font-bold tracking-tight text-gray-900">
-            Desempeño Comercial
-          </h1>
-
-          <p className="mt-2 text-sm text-gray-500">
-            Análisis de ingresos, eficiencia comercial
-            y desempeño de ventas.
+          <p className="text-xl font-semibold text-gray-900">
+            {formatCurrency(
+              revenueComparison.currentRevenue
+            )}
           </p>
-        </header>
+        </div>
+
+
+        <div>
+          <p className="text-xs text-gray-400">
+            {revenueComparison.previousYear}
+          </p>
+
+          <p className="text-xl font-semibold text-gray-900">
+            {formatCurrency(
+              revenueComparison.previousRevenue
+            )}
+          </p>
+        </div>
+
+
+        <div>
+          <p className="text-xs text-gray-400">
+            YoY
+          </p>
+
+          <p
+            className={`text-xl font-semibold ${
+              revenueComparison.changePercentage >= 0
+                ? "text-emerald-600"
+                : "text-red-600"
+            }`}
+          >
+            {revenueComparison.changePercentage >= 0
+              ? "+"
+              : ""}
+            {revenueComparison.changePercentage.toFixed(1)}
+            %
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  )}
+
+</div>
 
         <DashboardFilters
           cities={cities}
@@ -360,7 +439,9 @@ export default function Home() {
           selectedYear={selectedYear}
           onCityChange={setSelectedCity}
           onYearChange={setSelectedYear}
+          onResetFilters={resetFilters}
         />
+
 
         <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
@@ -405,6 +486,7 @@ export default function Home() {
         </section>
 
         <section className="mt-6 grid gap-6 lg:grid-cols-2">
+
           <RevenueByCityChart
             data={revenueByCity}
           />
@@ -432,6 +514,9 @@ export default function Home() {
           />
         </section>
 
+        <section className="mt-6">
+          <ExecutiveInsights />
+        </section>
       </div>
     </main>
   );

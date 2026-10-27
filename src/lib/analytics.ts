@@ -8,6 +8,7 @@ import type {
   RevenueByChannel,
   RevenueByCity,
   RevenueByPropertyType,
+  RevenueComparison,
   Sale,
 } from "./types";
 
@@ -40,7 +41,7 @@ export function calculateKPIs(
   };
 }
 
-/* funstion to conveert large numbers into a more readable format with suffixes (K, M, B) for thousands, millions, and billions. 
+/* function to convert large numbers into a more readable format with suffixes (K, M, B) for thousands, millions, and billions. 
 For example:
 6000000000 → $6.00B
 707350     → $707.35K
@@ -555,4 +556,73 @@ function getMonthDifference(
       startMonthNumber
     )
   );
+}
+
+export function calculateRevenueComparison(
+  sales: Sale[]
+): RevenueComparison | null {
+  if (sales.length === 0) {
+    return null;
+  }
+
+  const years = Array.from(
+    new Set(
+      sales.map((sale) =>
+        sale.saleDate.slice(0, 4)
+      )
+    )
+  ).sort();
+
+  if (years.length < 2) {
+    return null;
+  }
+
+  const currentYear =
+    years[years.length - 1];
+
+  const previousYear =
+    years[years.length - 2];
+
+  const currentRevenue = sales
+    .filter(
+      (sale) =>
+        sale.saleDate.startsWith(
+          currentYear
+        )
+    )
+    .reduce(
+      (sum, sale) =>
+        sum + sale.salePrice,
+      0
+    );
+
+  const previousRevenue = sales
+    .filter(
+      (sale) =>
+        sale.saleDate.startsWith(
+          previousYear
+        )
+    )
+    .reduce(
+      (sum, sale) =>
+        sum + sale.salePrice,
+      0
+    );
+
+  const changePercentage =
+    previousRevenue > 0
+      ? (
+          (currentRevenue -
+            previousRevenue) /
+          previousRevenue
+        ) * 100
+      : 0;
+
+  return {
+    currentYear,
+    previousYear,
+    currentRevenue,
+    previousRevenue,
+    changePercentage,
+  };
 }
