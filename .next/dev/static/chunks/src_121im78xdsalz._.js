@@ -1127,6 +1127,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 __turbopack_context__.s([
+    "calculateBuyerProfiles",
+    ()=>calculateBuyerProfiles,
     "calculateKPIs",
     ()=>calculateKPIs,
     "calculateMonthlyRevenue",
@@ -1245,6 +1247,29 @@ function calculateRevenueByPropertyType(sales, properties) {
             revenue: values.revenue,
             sales: values.sales
         })).sort((a, b)=>b.revenue - a.revenue);
+}
+function calculateBuyerProfiles(sales, customers) {
+    const customerMap = new Map(customers.map((customer)=>[
+            customer.customerId,
+            customer
+        ]));
+    const customersBySegment = new Map();
+    sales.forEach((sale)=>{
+        const customer = customerMap.get(sale.customerId);
+        if (!customer) {
+            return;
+        }
+        if (!customersBySegment.has(customer.buyerSegment)) {
+            customersBySegment.set(customer.buyerSegment, new Set());
+        }
+        customersBySegment.get(customer.buyerSegment)?.add(customer.customerId);
+    });
+    const totalCustomers = Array.from(customersBySegment.values()).reduce((total, customerSet)=>total + customerSet.size, 0);
+    return Array.from(customersBySegment.entries()).map(([buyerSegment, customerSet])=>({
+            buyerSegment,
+            customers: customerSet.size,
+            percentage: totalCustomers > 0 ? customerSet.size / totalCustomers * 100 : 0
+        })).sort((a, b)=>b.customers - a.customers);
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);

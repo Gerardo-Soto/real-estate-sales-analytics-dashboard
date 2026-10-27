@@ -5,6 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import KpiCard from "@/components/kpis/KpiCard";
 
 import {
+  calculateBuyerProfiles,
+  calculateCohortRetention,
   calculateKPIs,
   calculateMonthlyRevenue,
   calculateRevenueByChannel,
@@ -14,14 +16,14 @@ import {
 } from "@/lib/analytics";
 
 import { 
+  loadCustomers,
   loadSales, 
   loadProperties 
 } from "@/lib/data";
 
 import type {
+  Customer,
   Property,
-  RevenueByChannel,
-  RevenueByCity,
   Sale,
 } from "@/lib/types";
 
@@ -29,15 +31,20 @@ import MonthlyRevenueChart from "@/components/charts/MonthlyRevenueChart";
 import RevenueByCityChart from "@/components/charts/RevenueByCityChart";
 import RevenueByChannelChart from "@/components/charts/RevenueByChannelChart";
 import RevenueByPropertyTypeChart from "@/components/charts/RevenueByPropertyTypeChart";
+import BuyerProfileChart from "@/components/charts/BuyerProfileChart";
+import CohortRetentionHeatmap from "@/components/charts/CohortRetentionHeatmap";
 
 import DashboardFilters from "@/components/filters/DashboardFilters";
 
 export default function Home() {
   const [sales, setSales] =
-  useState<Sale[]>([]);
+    useState<Sale[]>([]);
 
   const [properties, setProperties] =
     useState<Property[]>([]);
+
+  const [customers, setCustomers] =
+    useState<Customer[]>([]);
 
   const [selectedCity, setSelectedCity] =
     useState("all");
@@ -58,9 +65,11 @@ export default function Home() {
       const [
         salesData,
         propertiesData,
+        customersData,
       ] = await Promise.all([
         loadSales(),
         loadProperties(),
+        loadCustomers(),
       ]);
 
       console.log(
@@ -74,12 +83,13 @@ export default function Home() {
       );
 
       console.log(
-        "First sale:",
-        salesData[0]
+        "Customers loaded:",
+        customersData.length
       );
 
       setSales(salesData);
       setProperties(propertiesData);
+      setCustomers(customersData);
 
     } catch (err) {
       console.error(
@@ -102,6 +112,37 @@ export default function Home() {
 
   fetchData();
 }, []);
+
+  useEffect(() => {
+  console.log(
+    "Sales state updated:",
+    sales.length
+  );
+
+  if (sales.length > 0) {
+    console.log(
+      "First sale for cohort:",
+      sales[0]
+    );
+
+    const testCohorts =
+      calculateCohortRetention(sales);
+
+    console.log(
+      "Test cohort count:",
+      testCohorts.length
+    );
+
+    console.table(
+      testCohorts.map((row) => ({
+        cohort: row.cohort,
+        cohortSize: row.cohortSize,
+        month0: row.retention[0],
+        month1: row.retention[1],
+      }))
+    );
+  }
+}, [sales]);
 
   const cities = useMemo(() => {
     return Array.from(
@@ -128,15 +169,15 @@ export default function Home() {
   ).sort();
 }, [sales]);
 
-  console.log(
+  /*console.log(
   "Sales state:",
   sales.length
-);
+);*/
 
-console.log(
+/*console.log(
   "Years:",
   years
-);
+);*/
 
   const propertyMap = useMemo(() => {
     return new Map(
@@ -211,7 +252,63 @@ console.log(
     ]
   );
 
+  const buyerProfiles = useMemo(
+    () =>
+      calculateBuyerProfiles(
+        filteredSales,
+        customers
+      ),
+    [
+      filteredSales,
+      customers,
+    ]
+  );
 
+  /*const cohortRetention = useMemo(
+    () =>
+      calculateCohortRetention(
+        filteredSales
+      ),
+    [filteredSales]
+  );*/
+  const cohortRetention = useMemo(
+    () =>
+      calculateCohortRetention(
+        sales
+      ),
+    [sales]
+  );
+
+  useEffect(() => {
+  if (sales.length === 0) {
+    return;
+  }
+
+  console.log(
+    "Sales for cohorts:",
+    sales.length
+  );
+
+  console.log(
+    "Cohort rows:",
+    cohortRetention.length
+  );
+
+  console.table(
+    cohortRetention.slice(0, 5).map(
+      (row) => ({
+        cohort: row.cohort,
+        cohortSize: row.cohortSize,
+        month0: row.retention[0],
+        month1: row.retention[1],
+        month2: row.retention[2],
+      })
+    )
+  );
+}, [sales, cohortRetention]);
+
+
+  
   if (loading) {
     return (
       <main className="p-8">
@@ -317,9 +414,21 @@ console.log(
           />
 
         </section>
-        <section className="mt-6">
+        <section className="mt-6 grid gap-6 lg:grid-cols-2">
+
           <RevenueByPropertyTypeChart
             data={revenueByPropertyType}
+          />
+
+          <BuyerProfileChart
+            data={buyerProfiles}
+          />
+
+        </section>
+
+        <section className="mt-6">
+          <CohortRetentionHeatmap
+            data={cohortRetention}
           />
         </section>
 

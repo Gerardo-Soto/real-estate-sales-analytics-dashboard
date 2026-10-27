@@ -1,4 +1,7 @@
 import type {
+  BuyerProfile,
+  CohortRetentionRow,
+  Customer,
   KPIs,
   MonthlyRevenue,
   Property,
@@ -259,4 +262,297 @@ export function calculateRevenueByPropertyType(
       (a, b) =>
         b.revenue - a.revenue
     );
+}
+
+export function calculateBuyerProfiles(
+  sales: Sale[],
+  customers: Customer[]
+): BuyerProfile[] {
+  const customerMap = new Map(
+    customers.map((customer) => [
+      customer.customerId,
+      customer,
+    ])
+  );
+
+  const customerIdsBySegment =
+    new Map<string, Set<string>>();
+
+  sales.forEach((sale) => {
+    const customer =
+      customerMap.get(sale.customerId);
+
+    if (!customer) {
+      return;
+    }
+
+    const segment =
+      customer.buyerSegment;
+
+    if (!segment) {
+      return;
+    }
+
+    if (!customerIdsBySegment.has(segment)) {
+      customerIdsBySegment.set(
+        segment,
+        new Set<string>()
+      );
+    }
+
+    customerIdsBySegment
+      .get(segment)!
+      .add(customer.customerId);
+  });
+
+  const totalCustomers =
+    Array.from(
+      customerIdsBySegment.values()
+    ).reduce(
+      (sum, customerIds) =>
+        sum + customerIds.size,
+      0
+    );
+
+  return Array.from(
+    customerIdsBySegment.entries()
+  )
+    .map(
+      ([
+        buyerSegment,
+        customerIds,
+      ]) => ({
+        buyerSegment,
+        customers:
+          customerIds.size,
+
+        percentage:
+          totalCustomers > 0
+            ? (
+                customerIds.size /
+                totalCustomers
+              ) * 100
+            : 0,
+      })
+    )
+    .sort(
+      (a, b) =>
+        b.customers -
+        a.customers
+    );
+}
+
+export function calculateCohortRetention(
+  sales: Sale[]
+): CohortRetentionRow[] {
+  if (sales.length === 0) {
+    return [];
+  }
+
+  const salesByCustomer = new Map<
+    string,
+    Sale[]
+  >();
+
+  for (const sale of sales) {
+    const customerSales =
+      salesByCustomer.get(
+        sale.customerId
+      ) ?? [];
+
+    customerSales.push(sale);
+
+    salesByCustomer.set(
+      sale.customerId,
+      customerSales
+    );
+  }
+
+  const cohortData = new Map<
+    string,
+    {
+      customers: Set<string>;
+      activity: Map<
+        number,
+        Set<string>
+      >;
+    }
+  >();
+
+  for (
+    const [
+      customerId,
+      customerSales,
+    ] of salesByCustomer
+  ) {
+    const sortedSales = [
+      ...customerSales,
+    ].sort((a, b) =>
+      a.saleDate.localeCompare(
+        b.saleDate
+      )
+    );
+
+    const firstSale =
+      sortedSales[0];
+
+    if (!firstSale) {
+      continue;
+    }
+
+    const cohort =
+      firstSale.saleDate.slice(0, 7);
+
+    if (!cohortData.has(cohort)) {
+      cohortData.set(cohort, {
+        customers: new Set(),
+        activity: new Map(),
+      });
+    }
+
+    const cohortInfo =
+      cohortData.get(cohort)!;
+
+    cohortInfo.customers.add(
+      customerId
+    );
+
+    for (const sale of sortedSales) {
+      const saleMonth =
+        sale.saleDate.slice(0, 7);
+
+      const monthIndex =
+        getMonthDifference(
+          cohort,
+          saleMonth
+        );
+
+      if (
+        !cohortInfo.activity.has(
+          monthIndex
+        )
+      ) {
+        cohortInfo.activity.set(
+          monthIndex,
+          new Set()
+        );
+      }
+
+      cohortInfo.activity
+        .get(monthIndex)!
+        .add(customerId);
+    }
+  }
+
+  const lastObservedMonth = sales
+    .map((sale) =>
+      sale.saleDate.slice(0, 7)
+    )
+    .sort()
+    .at(-1);
+
+  if (!lastObservedMonth) {
+    return [];
+  }
+
+  const firstCohort =
+    Array.from(
+      cohortData.keys()
+    )
+      .sort()
+      .at(0);
+
+  if (!firstCohort) {
+    return [];
+  }
+
+  const maxMonthIndex =
+    getMonthDifference(
+      firstCohort,
+      lastObservedMonth
+    );
+
+  return Array.from(
+    cohortData.entries()
+  )
+    .sort(([a], [b]) =>
+      a.localeCompare(b)
+    )
+    .map(
+      ([
+        cohort,
+        cohortInfo,
+      ]) => {
+        const cohortSize =
+          cohortInfo.customers.size;
+
+        const observableMonths =
+          getMonthDifference(
+            cohort,
+            lastObservedMonth
+          );
+
+        const retention =
+          Array.from(
+            {
+              length:
+                maxMonthIndex + 1,
+            },
+            (_, monthIndex) => {
+              if (
+                monthIndex >
+                observableMonths
+              ) {
+                return null;
+              }
+
+              const activeCustomers =
+                cohortInfo.activity.get(
+                  monthIndex
+                );
+
+              const activeCount =
+                activeCustomers?.size ?? 0;
+
+              return (
+                activeCount /
+                cohortSize
+              ) * 100;
+            }
+          );
+
+        return {
+          cohort,
+          cohortSize,
+          retention,
+        };
+      }
+    );
+}
+
+function getMonthDifference(
+  startMonth: string,
+  endMonth: string
+): number {
+  const [
+    startYear,
+    startMonthNumber,
+  ] = startMonth
+    .split("-")
+    .map(Number);
+
+  const [
+    endYear,
+    endMonthNumber,
+  ] = endMonth
+    .split("-")
+    .map(Number);
+
+  return (
+    (endYear - startYear) * 12 +
+    (
+      endMonthNumber -
+      startMonthNumber
+    )
+  );
 }

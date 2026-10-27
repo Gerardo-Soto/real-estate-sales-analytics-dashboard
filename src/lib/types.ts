@@ -56,3 +56,15 @@ export type RevenueByPropertyType = {
   revenue: number;
   sales: number;
 };
+
+export type BuyerProfile = {
+  buyerSegment: string;
+  customers: number;
+  percentage: number;
+};
+
+export type CohortRetentionRow = {
+  cohort: string;
+  cohortSize: number;
+  retention: (number | null)[];
+};

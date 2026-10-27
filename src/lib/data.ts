@@ -36,9 +36,7 @@ async function loadCsv(
 }
 
 
-export async function loadCustomers():
-  Promise<Customer[]> {
-
+export async function loadCustomers(): Promise<Customer[]> {
   const rows = await loadCsv(
     "/data/processed/dim_clientes_clean.csv"
   );

@@ -1,6 +1,6 @@
 type DashboardFiltersProps = {
   cities: string[];
-  years: number[];
+  years: string[];
   selectedCity: string;
   selectedYear: string;
   onCityChange: (city: string) => void;
