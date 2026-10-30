@@ -35,6 +35,8 @@ import RevenueByPropertyTypeChart from "@/components/charts/RevenueByPropertyTyp
 import BuyerProfileChart from "@/components/charts/BuyerProfileChart";
 import CohortRetentionHeatmap from "@/components/charts/CohortRetentionHeatmap";
 import ExecutiveInsights from "@/components/insights/ExecutiveInsights";
+import EmptyState from "@/components/ui/EmptyState";
+import DashboardSkeleton from "@/components/ui/DashboardSkeleton";
 
 import DashboardFilters from "@/components/filters/DashboardFilters";
 
@@ -223,7 +225,7 @@ export default function Home() {
     selectedCity,
     selectedYear,
   ]);
-  
+
   const kpis = useMemo(() => {
     return calculateKPIs(filteredSales);
   }, [filteredSales]);
@@ -278,6 +280,10 @@ export default function Home() {
       ),
     [filteredSales]
   );*/
+
+  const hasResults =
+  filteredSales.length > 0;
+
   const cohortRetention = useMemo(
     () =>
       calculateCohortRetention(
@@ -325,11 +331,7 @@ export default function Home() {
 
   
   if (loading) {
-    return (
-      <main className="p-8">
-        Loading dashboard...
-      </main>
-    );
+    return <DashboardSkeleton />;
   }
 
 
@@ -443,70 +445,71 @@ export default function Home() {
         />
 
 
-        <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {!hasResults ? (
+  <EmptyState
+    onResetFilters={resetFilters}
+  />
+) : (
+  <>
+    <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <KpiCard
+        title="Ingreso Total"
+        value={formatCurrency(
+          kpis.totalRevenue
+        )}
+        subtitle="Ingresos acumulados"
+      />
 
-          <KpiCard
-            title="Ingreso Total"
-            value={formatCurrency(
-              kpis.totalRevenue
-            )}
-            subtitle="Ingresos acumulados"
-          />
+      <KpiCard
+        title="Cantidad de Ventas"
+        value={kpis.totalSales.toLocaleString()}
+        subtitle="Operaciones realizadas"
+      />
 
-          <KpiCard
-            title="Cantidad de Ventas"
-            value={
-              kpis.totalSales.toLocaleString()
-            }
-            subtitle="Operaciones realizadas"
-          />
+      <KpiCard
+        title="Ticket Promedio"
+        value={formatCurrency(
+          kpis.averageTicket
+        )}
+        subtitle="Ingreso promedio por venta"
+      />
 
-          <KpiCard
-            title="Ticket Promedio"
-            value={formatCurrency(
-              kpis.averageTicket
-            )}
-            subtitle="Ingreso promedio por venta"
-          />
+      <KpiCard
+        title="Comisión Total"
+        value={formatCurrency(
+          kpis.totalCommission
+        )}
+        subtitle="Comisiones generadas"
+      />
+    </section>
 
-          <KpiCard
-            title="Comisión Total"
-            value={formatCurrency(
-              kpis.totalCommission
-            )}
-            subtitle="Comisiones generadas"
-          />
+    <section className="mt-6">
+      <MonthlyRevenueChart
+        data={monthlyRevenue}
+      />
+    </section>
 
-        </section>
+    <section className="mt-6 grid gap-6 lg:grid-cols-2">
+      <RevenueByCityChart
+        data={revenueByCity}
+      />
 
-        <section className="mt-6">
-          <MonthlyRevenueChart
-            data={monthlyRevenue}
-          />
-        </section>
+      <RevenueByChannelChart
+        data={revenueByChannel}
+      />
+    </section>
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-2">
+    <section className="mt-6 grid gap-6 lg:grid-cols-2">
+      <RevenueByPropertyTypeChart
+        data={revenueByPropertyType}
+      />
 
-          <RevenueByCityChart
-            data={revenueByCity}
-          />
-
-          <RevenueByChannelChart
-            data={revenueByChannel}
-          />
-
-        </section>
-        <section className="mt-6 grid gap-6 lg:grid-cols-2">
-
-          <RevenueByPropertyTypeChart
-            data={revenueByPropertyType}
-          />
-
-          <BuyerProfileChart
-            data={buyerProfiles}
-          />
-
-        </section>
+      <BuyerProfileChart
+        data={buyerProfiles}
+      />
+    </section>
+  </>
+)}
 
         <section className="mt-6">
           <CohortRetentionHeatmap
