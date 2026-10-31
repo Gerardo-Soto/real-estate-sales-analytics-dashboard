@@ -37,8 +37,9 @@ import CohortRetentionHeatmap from "@/components/charts/CohortRetentionHeatmap";
 import ExecutiveInsights from "@/components/insights/ExecutiveInsights";
 import EmptyState from "@/components/ui/EmptyState";
 import DashboardSkeleton from "@/components/ui/DashboardSkeleton";
-
 import DashboardFilters from "@/components/filters/DashboardFilters";
+import StorytellingModal from "@/components/storytelling/StorytellingModal";
+//import ExecutiveSummarySlide from "@/components/storytelling/./ExecutiveSummarySlide";
 
 export default function Home() {
   const [sales, setSales] =
@@ -61,6 +62,11 @@ export default function Home() {
 
   const [error, setError] =
     useState<string | null>(null);
+
+  const [
+    storytellingOpen,
+    setStorytellingOpen,
+  ] = useState(false);
 
   function resetFilters() {
     setSelectedCity("all");
@@ -369,6 +375,15 @@ export default function Home() {
     <p className="mt-2 text-sm text-gray-500">
       Análisis de ingresos, eficiencia comercial y desempeño de ventas.
     </p>
+
+    <button
+      type="button"
+      onClick={() => setStorytellingOpen(true)}
+      className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
+    >
+      Storytelling
+    </button>
+    
   </header>
 
 
@@ -430,6 +445,7 @@ export default function Home() {
       </div>
 
     </section>
+    
   )}
 
 </div>
@@ -449,6 +465,7 @@ export default function Home() {
   <EmptyState
     onResetFilters={resetFilters}
   />
+  
 ) : (
   <>
     <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -507,9 +524,12 @@ export default function Home() {
       <BuyerProfileChart
         data={buyerProfiles}
       />
+
+      
     </section>
   </>
 )}
+
 
         <section className="mt-6">
           <CohortRetentionHeatmap
@@ -521,6 +541,21 @@ export default function Home() {
           <ExecutiveInsights />
         </section>
       </div>
+      <StorytellingModal
+        isOpen={storytellingOpen}
+        onClose={() =>
+          setStorytellingOpen(false)
+        }
+        kpis={kpis}
+        monthlyRevenue={monthlyRevenue}
+        revenueByCity={revenueByCity}
+        revenueByChannel={revenueByChannel}
+        revenueByPropertyType={
+          revenueByPropertyType
+        }
+        buyerProfiles={buyerProfiles}
+        cohortRetention={cohortRetention}
+      />
     </main>
   );
 }
