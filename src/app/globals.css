@@ -9,3 +9,117 @@ body {
 body {
   background: #f9fafb;
 }
+
+/* Storytelling styles */
+.storytelling-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+/* Halo animado */
+.storytelling-button::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+
+  border-radius: inherit;
+
+  background: rgba(17, 24, 39, 0.35);
+
+  z-index: -1;
+
+  opacity: 0;
+
+  animation: storytelling-glow 2.5s ease-in-out infinite;
+}
+
+/* Brillo que atraviesa el botón */
+.storytelling-button::after {
+  content: "";
+
+  position: absolute;
+
+  top: -50%;
+  left: -70%;
+
+  width: 40%;
+  height: 200%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: rotate(20deg);
+
+  animation: storytelling-shine 3.5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+.storytelling-button:hover {
+  transform: translateY(-2px) scale(1.03);
+
+  box-shadow:
+    0 10px 25px rgba(17, 24, 39, 0.25),
+    0 0 0 4px rgba(17, 24, 39, 0.08);
+}
+
+
+.storytelling-button:active {
+  transform: translateY(0) scale(0.96);
+}
+
+
+@keyframes storytelling-glow {
+  0%,
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 0.3;
+    transform: scale(1.08);
+  }
+
+  85% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}
+
+
+@keyframes storytelling-shine {
+  0%,
+  65% {
+    left: -70%;
+  }
+
+  85%,
+  100% {
+    left: 140%;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .storytelling-button::before,
+  .storytelling-button::after {
+    animation: none;
+  }
+
+  .storytelling-button {
+    transition: none;
+  }
+}

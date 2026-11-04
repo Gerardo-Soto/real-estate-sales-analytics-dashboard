@@ -361,8 +361,9 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 px-6 py-8">
       <div className="mx-auto max-w-7xl">
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto_360px] lg:items-center">
 
+  {/* Title */}
   <header>
     <p className="text-sm font-medium text-gray-500">
       Real Estate Sales Analytics
@@ -375,20 +376,26 @@ export default function Home() {
     <p className="mt-2 text-sm text-gray-500">
       Análisis de ingresos, eficiencia comercial y desempeño de ventas.
     </p>
-
-    <button
-      type="button"
-      onClick={() => setStorytellingOpen(true)}
-      className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
-    >
-      Storytelling
-    </button>
-    
   </header>
 
 
+  {/* Storytelling button */}
+  <div className="flex justify-start lg:justify-center">
+    <button
+      type="button"
+      onClick={() =>
+        setStorytellingOpen(true)
+      }
+      className="storytelling-button rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white"
+    >
+      Storytelling
+    </button>
+  </div>
+
+
+  {/* Annual comparison */}
   {revenueComparison && (
-    <section className="min-w-[360px] rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
+    <section className="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
 
       <p className="text-xs font-medium uppercase tracking-wide text-gray-400">
         Comparación Anual
@@ -437,7 +444,9 @@ export default function Home() {
             {revenueComparison.changePercentage >= 0
               ? "+"
               : ""}
-            {revenueComparison.changePercentage.toFixed(1)}
+            {revenueComparison.changePercentage.toFixed(
+              1
+            )}
             %
           </p>
         </div>
@@ -445,7 +454,6 @@ export default function Home() {
       </div>
 
     </section>
-    
   )}
 
 </div>
@@ -465,6 +473,8 @@ export default function Home() {
   <EmptyState
     onResetFilters={resetFilters}
   />
+
+  
   
 ) : (
   <>
