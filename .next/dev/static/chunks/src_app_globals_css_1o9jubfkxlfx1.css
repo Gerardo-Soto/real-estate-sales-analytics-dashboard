@@ -1194,10 +1194,6 @@
       align-items: center;
     }
 
-    .lg\:items-start {
-      align-items: flex-start;
-    }
-
     .lg\:justify-center {
       justify-content: center;
     }
@@ -1215,7 +1211,7 @@ body {
 
 .storytelling-button {
   isolation: isolate;
-  transition: transform .18s, box-shadow .18s, background-color .18s;
+  transition: transform .5s, box-shadow .5s, background-color .5s;
   position: relative;
   overflow: hidden;
 }
@@ -1237,7 +1233,7 @@ body {
   background: linear-gradient(90deg, #0000, #ffffff59, #0000);
   width: 40%;
   height: 200%;
-  animation: 3.5s ease-in-out infinite storytelling-shine;
+  animation: 5s ease-in-out infinite storytelling-shine;
   position: absolute;
   top: -50%;
   left: -70%;

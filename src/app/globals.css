@@ -17,12 +17,12 @@ body {
   overflow: hidden;
 
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
+    transform 500ms ease,
+    box-shadow 500ms ease,
+    background-color 500ms ease;
 }
 
-/* Halo animado */
+/* Halo animated */
 .storytelling-button::before {
   content: "";
   position: absolute;
@@ -60,7 +60,7 @@ body {
 
   transform: rotate(20deg);
 
-  animation: storytelling-shine 3.5s ease-in-out infinite;
+  animation: storytelling-shine 5s ease-in-out infinite;
 
   pointer-events: none;
 }

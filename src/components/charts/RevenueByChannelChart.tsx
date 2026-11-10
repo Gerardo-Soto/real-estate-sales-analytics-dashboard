@@ -4,6 +4,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -13,6 +14,10 @@ import {
 import type {
   RevenueByChannel,
 } from "@/lib/types";
+
+import {
+  getRevenueBarColor,
+} from "@/lib/chartStyles";
 
 
 type RevenueByChannelChartProps = {
@@ -42,6 +47,10 @@ function formatRevenue(
 export default function RevenueByChannelChart({
   data,
 }: RevenueByChannelChartProps) {
+  const maxRevenue = Math.max(
+    ...data.map((item) => item.revenue),
+    0
+  );
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
@@ -100,9 +109,18 @@ export default function RevenueByChannelChart({
 
             <Bar
               dataKey="revenue"
-              fill="#111827"
-              radius={[6, 6, 0, 0]}
-            />
+              radius={[10, 10, 0, 0]}
+            >
+              {data.map((item) => (
+                <Cell
+                  key={item.channel}
+                  fill={getRevenueBarColor(
+                    item.revenue,
+                    maxRevenue
+                  )}
+                />
+              ))}
+            </Bar>
 
           </BarChart>
 
