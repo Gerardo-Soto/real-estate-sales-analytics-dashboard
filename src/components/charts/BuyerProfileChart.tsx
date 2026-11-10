@@ -13,6 +13,10 @@ import type {
   BuyerProfile,
 } from "@/lib/types";
 
+import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
 
 type BuyerProfileChartProps = {
   data: BuyerProfile[];
@@ -29,6 +33,16 @@ const chartColors = [
 export default function BuyerProfileChart({
   data,
 }: BuyerProfileChartProps) {
+  const { t } = useLanguage();
+  const translatedData =
+  data.map((item) => ({
+    ...item,
+
+    displayBuyerSegment:
+      t.categories.buyerSegments[
+        item.buyerSegment
+      ] ?? item.buyerSegment,
+  }));
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
@@ -51,14 +65,14 @@ export default function BuyerProfileChart({
           <PieChart>
 
             <Pie
-              data={data}
-              dataKey="customers"
-              nameKey="buyerSegment"
+              data={translatedData}
+              dataKey="percentage"
+              nameKey="displayBuyerSegment"
               innerRadius={60}
               outerRadius={95}
               paddingAngle={2}
             >
-              {data.map((entry, index) => (
+              {translatedData.map((entry, index) => (
                 <Cell
                   key={entry.buyerSegment}
                   fill={
@@ -83,7 +97,7 @@ export default function BuyerProfileChart({
                 return [
                   `${Number(
                     value
-                  ).toLocaleString()} clientes (${percentage.toFixed(
+                  ).toLocaleString()} ${t.charts.customers} (${percentage.toFixed(
                     1
                   )}%)`,
                   name,

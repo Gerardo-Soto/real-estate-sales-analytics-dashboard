@@ -19,6 +19,10 @@ import {
   getRevenueBarColor,
 } from "@/lib/chartStyles";
 
+import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
 
 type RevenueByCityChartProps = {
   data: RevenueByCity[];
@@ -51,16 +55,18 @@ export default function RevenueByCityChart({
     ...data.map((item) => item.revenue),
     0
   );
+  const { t } = useLanguage();
   return (
+
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900">
-          Ingresos por Ciudad
+          {t.charts.revenueByCity}
         </h2>
 
         <p className="mt-1 text-sm text-gray-500">
-          Distribución de ingresos entre las principales sedes.
+          {t.charts.revenueByCitySubtitle}
         </p>
       </div>
 
@@ -91,7 +97,7 @@ export default function RevenueByCityChart({
             <Tooltip
               formatter={(value) => [
                 formatRevenue(Number(value)),
-                "Ingresos",
+                t.charts.revenue,
               ]}
             />
 

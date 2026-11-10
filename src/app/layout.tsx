@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import {
+  LanguageProvider,
+} from "@/lib/i18n/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Real Estate Sales Analytics",
@@ -16,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

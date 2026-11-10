@@ -14,6 +14,10 @@ import type {
   MonthlyRevenue,
 } from "@/lib/types";
 
+import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
 
 type MonthlyRevenueChartProps = {
   data: MonthlyRevenue[];
@@ -63,16 +67,18 @@ function formatMonth(
 export default function MonthlyRevenueChart({
   data,
 }: MonthlyRevenueChartProps) {
+  const { t } =
+  useLanguage();
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900">
-          Evolución de Ingresos Mensuales
+          {t.charts.monthlyRevenue}
         </h2>
 
         <p className="mt-1 text-sm text-gray-500">
-          Ingresos generados por mes durante el periodo analizado.
+          {t.charts.monthlyRevenueSubtitle}
         </p>
       </div>
 
@@ -108,7 +114,7 @@ export default function MonthlyRevenueChart({
               }
               formatter={(value) => [
                 formatRevenue(Number(value)),
-                "Ingresos",
+                t.charts.revenue,
               ]}
             />
 

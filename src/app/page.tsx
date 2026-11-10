@@ -41,7 +41,16 @@ import DashboardFilters from "@/components/filters/DashboardFilters";
 import StorytellingModal from "@/components/storytelling/StorytellingModal";
 //import ExecutiveSummarySlide from "@/components/storytelling/./ExecutiveSummarySlide";
 
+import LanguageSwitcher from "@/components/language/LanguageSwitcher";
+
+import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
 export default function Home() {
+  const { t } =
+    useLanguage();
+
   const [sales, setSales] =
     useState<Sale[]>([]);
 
@@ -365,16 +374,22 @@ export default function Home() {
 
   {/* Title */}
   <header>
-    <p className="text-sm font-medium text-gray-500">
-      Real Estate Sales Analytics
-    </p>
+    <div className="flex items-center gap-3">
+
+      <p className="text-sm font-medium text-gray-500">
+        {t.dashboard.brand}
+      </p>
+
+      <LanguageSwitcher />
+
+    </div>
 
     <h1 className="mt-1 text-3xl font-bold tracking-tight text-gray-900">
-      Desempeño Comercial
+      {t.dashboard.title}
     </h1>
 
     <p className="mt-2 text-sm text-gray-500">
-      Análisis de ingresos, eficiencia comercial y desempeño de ventas.
+      {t.dashboard.subtitle}
     </p>
   </header>
 
@@ -388,7 +403,7 @@ export default function Home() {
       }
       className="storytelling-button rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white"
     >
-      Storytelling
+      {t.dashboard.storytelling}
     </button>
   </div>
 
@@ -480,33 +495,33 @@ export default function Home() {
   <>
     <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <KpiCard
-        title="Ingreso Total"
+        title={t.kpis.totalRevenue}
         value={formatCurrency(
           kpis.totalRevenue
         )}
-        subtitle="Ingresos acumulados"
+        subtitle={t.kpis.totalRevenueSubtitle}
       />
 
       <KpiCard
-        title="Cantidad de Ventas"
+        title={t.kpis.totalSales}
         value={kpis.totalSales.toLocaleString()}
-        subtitle="Operaciones realizadas"
+        subtitle={t.kpis.totalSalesSubtitle}
       />
 
       <KpiCard
-        title="Ticket Promedio"
+        title={t.kpis.averageTicket}
         value={formatCurrency(
           kpis.averageTicket
         )}
-        subtitle="Ingreso promedio por venta"
+        subtitle={t.kpis.averageTicketSubtitle}
       />
 
       <KpiCard
-        title="Comisión Total"
+        title={t.kpis.totalCommission}
         value={formatCurrency(
           kpis.totalCommission
         )}
-        subtitle="Comisiones generadas"
+        subtitle={t.kpis.totalCommissionSubtitle}
       />
     </section>
 

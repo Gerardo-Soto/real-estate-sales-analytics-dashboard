@@ -19,6 +19,10 @@ import {
   getRevenueBarColor,
 } from "@/lib/chartStyles";
 
+import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
 
 type RevenueByPropertyTypeChartProps = {
   data: RevenueByPropertyType[];
@@ -51,16 +55,25 @@ export default function RevenueByPropertyTypeChart({
     ...data.map((item) => item.revenue),
     0
   );
+
+  const { t } = useLanguage();
+
+  const translatedData = data.map((item) => ({
+    ...item,
+    displayPropertyType: 
+      t.categories.propertyTypes[item.propertyType] ?? item.propertyType,
+  }));
+
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900">
-          Ingresos por Tipo de Propiedad
+          {t.charts.revenueByPropertyType}
         </h2>
 
         <p className="mt-1 text-sm text-gray-500">
-          Desempeño del portafolio inmobiliario.
+          {t.charts.revenueByPropertyTypeSubtitle}
         </p>
       </div>
 
@@ -70,7 +83,7 @@ export default function RevenueByPropertyTypeChart({
           width="100%"
           height="100%"
         >
-          <BarChart data={data}>
+          <BarChart data={translatedData}>
 
             <CartesianGrid
               strokeDasharray="3 3"
@@ -78,7 +91,7 @@ export default function RevenueByPropertyTypeChart({
             />
 
             <XAxis
-              dataKey="propertyType"
+              dataKey="displayPropertyType"
               tick={{ fontSize: 12 }}
             />
 
@@ -91,7 +104,7 @@ export default function RevenueByPropertyTypeChart({
             <Tooltip
               formatter={(value) => [
                 formatRevenue(Number(value)),
-                "Ingresos",
+                t.charts.revenue,
               ]}
             />
 
@@ -99,7 +112,7 @@ export default function RevenueByPropertyTypeChart({
               dataKey="revenue"
               radius={[10, 10, 0, 0]}
             >
-              {data.map((item) => (
+              {translatedData.map((item) => (
                 <Cell
                   key={item.propertyType}
                   fill={getRevenueBarColor(

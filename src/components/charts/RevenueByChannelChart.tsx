@@ -19,6 +19,8 @@ import {
   getRevenueBarColor,
 } from "@/lib/chartStyles";
 
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+
 
 type RevenueByChannelChartProps = {
   data: RevenueByChannel[];
@@ -51,16 +53,28 @@ export default function RevenueByChannelChart({
     ...data.map((item) => item.revenue),
     0
   );
+  const { t } = useLanguage();
+  const translatedData =
+  data.map((item) => ({
+    ...item,
+
+    displayChannel:
+      t.categories.channels[
+        item.channel
+      ] ?? item.channel,
+  }));
+  
+
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900">
-          Ingresos por Canal de Venta
+          {t.charts.revenueByChannel}
         </h2>
 
         <p className="mt-1 text-sm text-gray-500">
-          Comparación del desempeño comercial por canal.
+          {t.charts.revenueByChannelSubtitle}
         </p>
       </div>
 
@@ -71,7 +85,7 @@ export default function RevenueByChannelChart({
           height="100%"
         >
 
-          <BarChart data={data}>
+          <BarChart data={translatedData}>
 
             <CartesianGrid
               strokeDasharray="3 3"
@@ -79,7 +93,7 @@ export default function RevenueByChannelChart({
             />
 
             <XAxis
-              dataKey="channel"
+              dataKey="displayChannel"
               tick={{ fontSize: 12 }}
             />
 
@@ -96,13 +110,13 @@ export default function RevenueByChannelChart({
                     formatRevenue(
                       Number(value)
                     ),
-                    "Ingresos",
+                    t.charts.revenue,
                   ];
                 }
 
                 return [
                   Number(value).toLocaleString(),
-                  "Ventas",
+                  t.charts.sales,
                 ];
               }}
             />
