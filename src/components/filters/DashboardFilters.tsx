@@ -1,3 +1,5 @@
+import {useLanguage} from "@/lib/i18n/LanguageContext";
+
 type DashboardFiltersProps = {
   cities: string[];
   years: string[];
@@ -17,6 +19,7 @@ export default function DashboardFilters({
   onYearChange,
   onResetFilters
 }: DashboardFiltersProps) {
+  const { t } = useLanguage();
   return (
     <section className="mt-6 flex flex-wrap gap-4">
       <div>
@@ -24,7 +27,7 @@ export default function DashboardFilters({
           htmlFor="city"
           className="mb-1 block text-sm font-medium text-gray-600"
         >
-          Ciudad
+          {t.filters.city}
         </label>
 
         <select
@@ -36,7 +39,7 @@ export default function DashboardFilters({
           className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900"
         >
           <option value="all">
-            Todas las ciudades
+            {t.filters.allCities}
           </option>
 
           {cities.map((city) => (
@@ -55,7 +58,7 @@ export default function DashboardFilters({
           htmlFor="year"
           className="mb-1 block text-sm font-medium text-gray-600"
         >
-          Año
+          {t.filters.year}
         </label>
 
         <select
@@ -67,7 +70,7 @@ export default function DashboardFilters({
           className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900"
         >
           <option value="all">
-            Todos los años
+            {t.filters.allYears}
           </option>
 
           {years.map((year) => (
@@ -89,7 +92,7 @@ export default function DashboardFilters({
           }
           className="self-end rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          Limpiar filtros
+          {t.filters.reset}
         </button>
       </div>
     </section>

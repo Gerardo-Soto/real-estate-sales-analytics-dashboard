@@ -396,16 +396,31 @@ export default function Home() {
 
   {/* Storytelling button */}
   <div className="flex justify-start lg:justify-center">
+    <a
+      href="https://github.com/Gerardo-Soto/real-estate-sales-analytics-dashboard/blob/main/notebooks/01_etl_data_quality_real_estate.ipynb"
+      target="_blank"
+      title="View ETL process on GitHub"
+      rel="noopener noreferrer"
+      className=" relative inline-flex overflow-hidden rounded-xl p-[2px] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
+    >
+      <span className="relative z-10 cursor: pointer inline-flex min-w-[120px] items-center justify-center rounded-[10px] bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white">
+        ETL
+      </span>
+    </a>
+    
     <button
       type="button"
       onClick={() =>
         setStorytellingOpen(true)
       }
-      className="storytelling-button rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white"
+      className="storytelling-button relative inline-flex overflow-hidden rounded-xl p-[3px] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
     >
-      {t.dashboard.storytelling}
+      <span className="relative z-10 inline-flex min-w-[120px] items-center justify-center rounded-[10px] bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white">
+        {t.dashboard.storytelling}
+      </span>
     </button>
   </div>
+
 
 
   {/* Annual comparison */}

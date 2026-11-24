@@ -44,14 +44,15 @@ function getLanguageSnapshot(): Language {
       LANGUAGE_STORAGE_KEY
     );
 
-  if (
-    savedLanguage === "es" ||
+  const language: Language =
     savedLanguage === "en"
-  ) {
-    return savedLanguage;
-  }
+      ? "en"
+      : "es";
 
-  return "es";
+  document.documentElement.lang =
+    language;
+
+  return language;
 }
 
 
@@ -106,18 +107,21 @@ export function LanguageProvider({
 
   function setLanguage(
     newLanguage: Language
-  ) {
+    ) {
     localStorage.setItem(
-      LANGUAGE_STORAGE_KEY,
-      newLanguage
+        LANGUAGE_STORAGE_KEY,
+        newLanguage
     );
 
+    document.documentElement.lang =
+        newLanguage;
+
     window.dispatchEvent(
-      new Event(
+        new Event(
         LANGUAGE_CHANGE_EVENT
-      )
+        )
     );
-  }
+    }
 
 
   const t =

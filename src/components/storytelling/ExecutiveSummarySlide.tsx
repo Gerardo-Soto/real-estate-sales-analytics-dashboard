@@ -11,8 +11,16 @@ import {
 } from "recharts";
 
 import {
+  useLanguage,
+} from "@/lib/i18n/LanguageContext";
+
+import {
   formatCurrency,
 } from "@/lib/analytics";
+
+import type {
+  Language,
+} from "@/lib/i18n/translations";
 
 import type {
   KPIs,
@@ -46,7 +54,8 @@ function formatRevenue(
 
 
 function formatMonth(
-  month: string
+  month: string,
+  language: Language
 ): string {
   const [
     year,
@@ -58,8 +67,13 @@ function formatMonth(
     Number(monthNumber) - 1
   );
 
+  const locale =
+    language === "en"
+      ? "en-US"
+      : "es-MX";
+
   return date.toLocaleDateString(
-    "es-MX",
+    locale,
     {
       month: "short",
       year: "2-digit",
@@ -72,15 +86,25 @@ export default function ExecutiveSummarySlide({
   kpis,
   monthlyRevenue,
 }: ExecutiveSummarySlideProps) {
+  const {
+    t,
+    language,
+  } = useLanguage();
+
+  const copy =
+    t.storytelling.executiveSummary;
+
+
   return (
     <div className="flex flex-1 flex-col">
 
       {/* KPIs */}
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
 
         <div className="rounded-xl bg-gray-50 p-4">
           <p className="text-xs font-medium text-gray-500">
-            Ingreso Total
+            {copy.totalRevenue}
           </p>
 
           <p className="mt-1 text-2xl font-bold text-gray-900">
@@ -93,18 +117,22 @@ export default function ExecutiveSummarySlide({
 
         <div className="rounded-xl bg-gray-50 p-4">
           <p className="text-xs font-medium text-gray-500">
-            Ventas
+            {copy.totalSales}
           </p>
 
           <p className="mt-1 text-2xl font-bold text-gray-900">
-            {kpis.totalSales.toLocaleString()}
+            {kpis.totalSales.toLocaleString(
+              language === "en"
+                ? "en-US"
+                : "es-MX"
+            )}
           </p>
         </div>
 
 
         <div className="rounded-xl bg-gray-50 p-4">
           <p className="text-xs font-medium text-gray-500">
-            Ticket Promedio
+            {copy.averageTicket}
           </p>
 
           <p className="mt-1 text-2xl font-bold text-gray-900">
@@ -117,7 +145,7 @@ export default function ExecutiveSummarySlide({
 
         <div className="rounded-xl bg-gray-50 p-4">
           <p className="text-xs font-medium text-gray-500">
-            Comisión Total
+            {copy.totalCommission}
           </p>
 
           <p className="mt-1 text-2xl font-bold text-gray-900">
@@ -131,19 +159,25 @@ export default function ExecutiveSummarySlide({
 
 
       {/* Main storytelling area */}
+
       <div className="mt-6 grid flex-1 gap-6 lg:grid-cols-[1.7fr_1fr]">
 
         {/* Chart */}
+
         <div className="rounded-xl border border-gray-200 p-5">
 
           <div>
+
             <h3 className="font-semibold text-gray-900">
-              Evolución de Ingresos
+              {copy.revenueTrendTitle}
             </h3>
 
             <p className="mt-1 text-xs text-gray-500">
-              Comportamiento mensual durante el periodo analizado.
+              {
+                copy.revenueTrendSubtitle
+              }
             </p>
+
           </div>
 
 
@@ -162,35 +196,53 @@ export default function ExecutiveSummarySlide({
                   vertical={false}
                 />
 
+
                 <XAxis
                   dataKey="month"
-                  tickFormatter={formatMonth}
+                  tickFormatter={(
+                    value
+                  ) =>
+                    formatMonth(
+                      String(value),
+                      language
+                    )
+                  }
                   tick={{
                     fontSize: 10,
                   }}
                 />
 
+
                 <YAxis
-                  tickFormatter={formatRevenue}
+                  tickFormatter={
+                    formatRevenue
+                  }
                   tick={{
                     fontSize: 10,
                   }}
                   width={60}
                 />
 
+
                 <Tooltip
-                  labelFormatter={(label) =>
+                  labelFormatter={(
+                    label
+                  ) =>
                     formatMonth(
-                      String(label)
+                      String(label),
+                      language
                     )
                   }
-                  formatter={(value) => [
+                  formatter={(
+                    value
+                  ) => [
                     formatRevenue(
                       Number(value)
                     ),
-                    "Ingresos",
+                    copy.revenue,
                   ]}
                 />
+
 
                 <Line
                   type="monotone"
@@ -209,50 +261,52 @@ export default function ExecutiveSummarySlide({
 
 
         {/* Narrative */}
+
         <div className="flex flex-col gap-4">
 
           <div className="rounded-xl bg-gray-900 p-5 text-white">
+
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Mensaje clave
+              {copy.messageLabel}
             </p>
+
 
             <p className="mt-3 text-xl font-semibold leading-7">
-              El negocio generó más de
-              {" "}
-              {formatCurrency(
-                kpis.totalRevenue
-              )}
-              {" "}
-              durante el periodo analizado.
+              {copy.messageText}{" "}
+
+              <span>
+                {formatCurrency(
+                  kpis.totalRevenue
+                )}
+              </span>
             </p>
+
           </div>
 
 
           <div className="rounded-xl border border-gray-200 p-5">
+
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Hallazgo
+              {copy.findingLabel}
             </p>
 
             <p className="mt-2 text-sm leading-6 text-gray-700">
-              Los ingresos muestran ciclos de
-              crecimiento y desaceleración a lo
-              largo del periodo, indicando que
-              el desempeño comercial no es
-              uniforme mes a mes.
+              {copy.findingText}
             </p>
+
           </div>
 
 
           <div className="rounded-xl border border-gray-200 p-5">
+
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Pregunta de negocio
+              {copy.questionLabel}
             </p>
 
             <p className="mt-2 text-sm leading-6 text-gray-700">
-              ¿Qué ciudades, canales y tipos de
-              propiedad explican estos cambios
-              en los ingresos?
+              {copy.questionText}
             </p>
+
           </div>
 
         </div>

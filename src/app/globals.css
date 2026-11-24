@@ -1,45 +1,92 @@
 @import "tailwindcss";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+/* ========================================
+   Storytelling Button
+   Rotating Gradient Border
+   ======================================== */
 
-body {
-  background: #f9fafb;
-}
-
-/* Storytelling styles */
 .storytelling-button {
-  position: relative;
   isolation: isolate;
-  overflow: hidden;
-
-  transition:
-    transform 500ms ease,
-    box-shadow 500ms ease,
-    background-color 500ms ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-/* Halo animated */
+
+/* Rotating gradient */
 .storytelling-button::before {
   content: "";
+
   position: absolute;
-  inset: -4px;
 
-  border-radius: inherit;
+  width: 180%;
+  aspect-ratio: 1;
 
-  background: rgba(17, 24, 39, 0.35);
+  top: 50%;
+  left: 50%;
 
-  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    #111827,
+    #374151,
+    #9ca3af,
+    #ffffff,
+    #60a5fa,
+    #6366f1,
+    #111827
+  );
 
-  opacity: 0;
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg);
 
-  animation: storytelling-glow 2.5s ease-in-out infinite;
+  animation:
+    storytelling-border-spin
+    3s
+    linear
+    infinite;
+
+  z-index: 0;
 }
 
-/* Brillo que atraviesa el botón */
+
+/* ========================================
+   Rotating Border Animation
+   ======================================== */
+
+@keyframes storytelling-border-spin {
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+}
+
+
+/* ========================================
+   Accessibility
+   ======================================== */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+  .storytelling-button::before {
+    animation: none;
+  }
+}
+
+
+/* ========================================
+   Storytelling Button Shine
+   ======================================== */
+
 .storytelling-button::after {
   content: "";
 
@@ -60,45 +107,19 @@ body {
 
   transform: rotate(20deg);
 
-  animation: storytelling-shine 5s ease-in-out infinite;
+  animation:
+    storytelling-shine
+    3.5s
+    ease-in-out
+    infinite;
 
   pointer-events: none;
 }
 
 
-.storytelling-button:hover {
-  transform: translateY(-2px) scale(1.03);
-
-  box-shadow:
-    0 10px 25px rgba(17, 24, 39, 0.25),
-    0 0 0 4px rgba(17, 24, 39, 0.08);
-}
-
-
-.storytelling-button:active {
-  transform: translateY(0) scale(0.96);
-}
-
-
-@keyframes storytelling-glow {
-  0%,
-  60%,
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-
-  70% {
-    opacity: 0.3;
-    transform: scale(1.08);
-  }
-
-  85% {
-    opacity: 0;
-    transform: scale(1.18);
-  }
-}
-
+/* ========================================
+   Animation
+   ======================================== */
 
 @keyframes storytelling-shine {
   0%,
@@ -113,13 +134,15 @@ body {
 }
 
 
-@media (prefers-reduced-motion: reduce) {
-  .storytelling-button::before,
+/* ========================================
+   Accessibility
+   ======================================== */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
   .storytelling-button::after {
     animation: none;
-  }
-
-  .storytelling-button {
-    transition: none;
   }
 }
