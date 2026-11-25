@@ -63,6 +63,11 @@ export default function Home() {
   const [selectedCity, setSelectedCity] =
     useState("all");
 
+  const [
+    selectedPropertyType,
+    setSelectedPropertyType,
+  ] = useState("all");
+
   const [selectedYear, setSelectedYear] =
     useState("all");
 
@@ -80,6 +85,7 @@ export default function Home() {
   function resetFilters() {
     setSelectedCity("all");
     setSelectedYear("all");
+    setSelectedPropertyType("all");
   }
 
 
@@ -178,6 +184,18 @@ export default function Home() {
     ).sort();
   }, [properties]);
 
+  const propertyTypes =
+  useMemo(() => {
+    return Array.from(
+      new Set(
+        properties.map(
+          (property) =>
+            property.propertyType
+        )
+      )
+    ).sort();
+  }, [properties]);
+
   const years = useMemo(() => {
   const uniqueYears = sales
     .map((sale) =>
@@ -212,33 +230,46 @@ export default function Home() {
     );
   }, [properties]);
 
-  const filteredSales = useMemo(() => {
-    return sales.filter((sale) => {
-      const property =
-        propertyMap.get(sale.propertyId);
+  const filteredSales =
+  useMemo(() => {
+    return sales.filter(
+      (sale) => {
+        const property =
+          propertyMap.get(
+            sale.propertyId
+          );
 
-      if (!property) {
-        return false;
+        const matchesCity =
+          selectedCity === "all" ||
+          property?.city ===
+            selectedCity;
+
+        const matchesYear =
+          selectedYear === "all" ||
+          sale.saleDate.slice(
+            0,
+            4
+          ) === selectedYear;
+
+        const matchesPropertyType =
+          selectedPropertyType ===
+            "all" ||
+          property?.propertyType ===
+            selectedPropertyType;
+
+        return (
+          matchesCity &&
+          matchesYear &&
+          matchesPropertyType
+        );
       }
-
-      const saleYear =
-        sale.saleDate.slice(0, 4);
-
-      const cityMatches =
-        selectedCity === "all" ||
-        property.city === selectedCity;
-
-      const yearMatches =
-        selectedYear === "all" ||
-        saleYear === selectedYear;
-
-      return cityMatches && yearMatches;
-    });
+    );
   }, [
     sales,
     propertyMap,
     selectedCity,
     selectedYear,
+    selectedPropertyType,
   ]);
 
   const kpis = useMemo(() => {
@@ -319,7 +350,7 @@ export default function Home() {
   if (sales.length === 0) {
     return;
   }
-
+/*
   console.log(
     "Sales for cohorts:",
     sales.length
@@ -340,7 +371,7 @@ export default function Home() {
         month2: row.retention[2],
       })
     )
-  );
+  );*/
 }, [sales, cohortRetention]);
 
 
@@ -401,9 +432,9 @@ export default function Home() {
       target="_blank"
       title="View ETL process on GitHub"
       rel="noopener noreferrer"
-      className=" relative inline-flex overflow-hidden rounded-xl p-[2px] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
+      className="etl-marg relative inline-flex overflow-hidden rounded-xl p-[2px] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-95"
     >
-      <span className="relative z-10 cursor: pointer inline-flex min-w-[120px] items-center justify-center rounded-[10px] bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white">
+      <span className="relative z-10 cursor: pointer  inline-flex min-w-[120px] items-center justify-center rounded-[10px] bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white">
         ETL
       </span>
     </a>
@@ -488,85 +519,90 @@ export default function Home() {
 
         <DashboardFilters
           cities={cities}
+          propertyTypes={propertyTypes}
           years={years}
+          
           selectedCity={selectedCity}
+          selectedPropertyType={selectedPropertyType}
           selectedYear={selectedYear}
+          
           onCityChange={setSelectedCity}
+          onPropertyTypeChange={setSelectedPropertyType}
           onYearChange={setSelectedYear}
+
+          
           onResetFilters={resetFilters}
         />
 
 
         {!hasResults ? (
-  <EmptyState
-    onResetFilters={resetFilters}
-  />
+          <EmptyState
+            onResetFilters={resetFilters}
+          />
 
-  
-  
-) : (
-  <>
-    <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <KpiCard
-        title={t.kpis.totalRevenue}
-        value={formatCurrency(
-          kpis.totalRevenue
+        ) : (
+          <>
+            <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <KpiCard
+                title={t.kpis.totalRevenue}
+                value={formatCurrency(
+                  kpis.totalRevenue
+                )}
+                subtitle={t.kpis.totalRevenueSubtitle}
+              />
+
+              <KpiCard
+                title={t.kpis.totalSales}
+                value={kpis.totalSales.toLocaleString()}
+                subtitle={t.kpis.totalSalesSubtitle}
+              />
+
+              <KpiCard
+                title={t.kpis.averageTicket}
+                value={formatCurrency(
+                  kpis.averageTicket
+                )}
+                subtitle={t.kpis.averageTicketSubtitle}
+              />
+
+              <KpiCard
+                title={t.kpis.totalCommission}
+                value={formatCurrency(
+                  kpis.totalCommission
+                )}
+                subtitle={t.kpis.totalCommissionSubtitle}
+              />
+            </section>
+
+            <section className="mt-6">
+              <MonthlyRevenueChart
+                data={monthlyRevenue}
+              />
+            </section>
+
+            <section className="mt-6 grid gap-6 lg:grid-cols-2">
+              <RevenueByCityChart
+                data={revenueByCity}
+              />
+
+              <RevenueByChannelChart
+                data={revenueByChannel}
+              />
+            </section>
+
+            <section className="mt-6 grid gap-6 lg:grid-cols-2">
+              <RevenueByPropertyTypeChart
+                data={revenueByPropertyType}
+              />
+
+              <BuyerProfileChart
+                data={buyerProfiles}
+              />
+
+              
+            </section>
+          </>
         )}
-        subtitle={t.kpis.totalRevenueSubtitle}
-      />
-
-      <KpiCard
-        title={t.kpis.totalSales}
-        value={kpis.totalSales.toLocaleString()}
-        subtitle={t.kpis.totalSalesSubtitle}
-      />
-
-      <KpiCard
-        title={t.kpis.averageTicket}
-        value={formatCurrency(
-          kpis.averageTicket
-        )}
-        subtitle={t.kpis.averageTicketSubtitle}
-      />
-
-      <KpiCard
-        title={t.kpis.totalCommission}
-        value={formatCurrency(
-          kpis.totalCommission
-        )}
-        subtitle={t.kpis.totalCommissionSubtitle}
-      />
-    </section>
-
-    <section className="mt-6">
-      <MonthlyRevenueChart
-        data={monthlyRevenue}
-      />
-    </section>
-
-    <section className="mt-6 grid gap-6 lg:grid-cols-2">
-      <RevenueByCityChart
-        data={revenueByCity}
-      />
-
-      <RevenueByChannelChart
-        data={revenueByChannel}
-      />
-    </section>
-
-    <section className="mt-6 grid gap-6 lg:grid-cols-2">
-      <RevenueByPropertyTypeChart
-        data={revenueByPropertyType}
-      />
-
-      <BuyerProfileChart
-        data={buyerProfiles}
-      />
-
-      
-    </section>
-  </>
-)}
 
 
         <section className="mt-6">

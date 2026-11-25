@@ -22,6 +22,8 @@ export type TranslationSchema = {
     reset: string;
     showingResults: string;
     activeFilters: string;
+    propertyType: string;
+    allPropertyTypes: string;
   };
 
   kpis: {
@@ -148,6 +150,10 @@ export const translations: Record<
         "Mostrando resultados para",
       activeFilters:
         "Filtros activos",
+      propertyType:
+        "Tipo de Propiedad",
+      allPropertyTypes:
+        "Todos los tipos de propiedad",
     },
 
     kpis: {
@@ -368,8 +374,12 @@ export const translations: Record<
         "Reset filters",
       showingResults:
         "Showing results for",
-        activeFilters:
+      activeFilters:
         "Active filters",
+      propertyType:
+        "Property Type",
+      allPropertyTypes:
+        "All property types",
     },
 
     kpis: {

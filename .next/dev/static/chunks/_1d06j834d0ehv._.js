@@ -1608,7 +1608,9 @@ const translations = {
             allYears: "Todos los años",
             reset: "Limpiar filtros",
             showingResults: "Mostrando resultados para",
-            activeFilters: "Filtros activos"
+            activeFilters: "Filtros activos",
+            propertyType: "Tipo de Propiedad",
+            allPropertyTypes: "Todos los tipos de propiedad"
         },
         kpis: {
             totalRevenue: "Ingreso Total",
@@ -1713,7 +1715,9 @@ const translations = {
             allYears: "All years",
             reset: "Reset filters",
             showingResults: "Showing results for",
-            activeFilters: "Active filters"
+            activeFilters: "Active filters",
+            propertyType: "Property Type",
+            allPropertyTypes: "All property types"
         },
         kpis: {
             totalRevenue: "Total Revenue",
