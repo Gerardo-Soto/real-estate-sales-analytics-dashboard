@@ -435,19 +435,6 @@ export default function Home() {
 
         <div>
           <p className="text-xs text-gray-400">
-            {revenueComparison.currentYear}
-          </p>
-
-          <p className="text-xl font-semibold text-gray-900">
-            {formatCurrency(
-              revenueComparison.currentRevenue
-            )}
-          </p>
-        </div>
-
-
-        <div>
-          <p className="text-xs text-gray-400">
             {revenueComparison.previousYear}
           </p>
 
@@ -458,6 +445,17 @@ export default function Home() {
           </p>
         </div>
 
+        <div>
+          <p className="text-xs text-gray-400">
+            {revenueComparison.currentYear}
+          </p>
+
+          <p className="text-xl font-semibold text-gray-900">
+            {formatCurrency(
+              revenueComparison.currentRevenue
+            )}
+          </p>
+        </div>
 
         <div>
           <p className="text-xs text-gray-400">

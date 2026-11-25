@@ -2,7 +2,6 @@
 
 import {
   Cell,
-  Legend,
   Pie,
   PieChart,
   ResponsiveContainer,
@@ -12,7 +11,6 @@ import {
 import type {
   BuyerProfile,
 } from "@/lib/types";
-
 
 type BuyerProfileSlideProps = {
   buyerProfiles: BuyerProfile[];
@@ -29,8 +27,10 @@ const chartColors = [
 export default function BuyerProfileSlide({
   buyerProfiles,
 }: BuyerProfileSlideProps) {
+  
   const topSegment =
     buyerProfiles[0];
+  
 
   return (
     <div className="grid flex-1 gap-6 lg:grid-cols-[1.5fr_1fr]">
@@ -40,7 +40,7 @@ export default function BuyerProfileSlide({
 
         <div>
           <h3 className="font-semibold text-gray-900">
-            Distribución de Clientes
+            Distribución por Segmento
           </h3>
 
           <p className="mt-1 text-xs text-gray-500">
@@ -50,7 +50,7 @@ export default function BuyerProfileSlide({
         </div>
 
 
-        <div className="mt-4 h-80">
+        <div className="mt-5 h-85">
 
           <ResponsiveContainer
             width="100%"
@@ -62,16 +62,29 @@ export default function BuyerProfileSlide({
                 data={buyerProfiles}
                 dataKey="customers"
                 nameKey="buyerSegment"
+                cx="50%"
+                cy="45%"
                 innerRadius={75}
                 outerRadius={115}
-                paddingAngle={3}
-              >
+                paddingAngle={2}
+                labelLine={false}
+                label={(props) => {
+                  const percentage =
+                    Number(
+                      props.payload?.percentage ??
+                        0
+                    );
 
+                  return `${percentage.toFixed(
+                    1
+                  )}%`;
+                }}
+              >
                 {buyerProfiles.map(
-                  (profile, index) => (
+                  (item, index) => (
                     <Cell
                       key={
-                        profile.buyerSegment
+                        item.buyerSegment
                       }
                       fill={
                         chartColors[
@@ -82,36 +95,75 @@ export default function BuyerProfileSlide({
                     />
                   )
                 )}
-
               </Pie>
+
 
               <Tooltip
                 formatter={(
                   value,
-                  name,
+                  _name,
                   props
                 ) => {
                   const percentage =
-                    props.payload.percentage;
+                    Number(
+                      props.payload
+                        ?.percentage ?? 0
+                    );
 
                   return [
                     `${Number(
                       value
-                    ).toLocaleString()} clientes (${percentage.toFixed(
+                    ).toLocaleString(
+                      "es-MX"
+                    )} clientes (${percentage.toFixed(
                       1
                     )}%)`,
-                    name,
+                    props.payload
+                      ?.buyerSegment,
                   ];
                 }}
               />
-
-              <Legend />
 
             </PieChart>
           </ResponsiveContainer>
 
         </div>
+<div className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-2">
 
+  {buyerProfiles.map(
+    (item, index) => (
+      <div
+        key={item.buyerSegment}
+        className="flex items-center gap-2"
+      >
+
+        <span
+          className="h-3 w-3 rounded-sm"
+          style={{
+            backgroundColor:
+              chartColors[
+                index %
+                  chartColors.length
+              ],
+          }}
+        />
+
+        <span className="text-sm text-gray-600">
+          {item.buyerSegment}
+        </span>
+
+        <span className="text-sm font-semibold text-gray-900">
+          {item.percentage.toFixed(
+            1
+          )}
+          %
+        </span>
+
+      </div>
+    )
+  )}
+
+</div>
       </div>
 
 
@@ -125,92 +177,50 @@ export default function BuyerProfileSlide({
               Segmento principal
             </p>
 
-            <p className="mt-3 text-xl font-semibold leading-7">
-              {topSegment.buyerSegment}
-              {" "}
-              representa el{" "}
-              {topSegment.percentage.toFixed(
-                1
-              )}
-              % de los clientes analizados.
-            </p>
+            {topSegment && (
+              <p className="mt-3 text-lg font-semibold leading-7">
+                El segmento con mayor participación es{" "}
 
+                <span>
+                  {topSegment.buyerSegment}
+                </span>
+              </p>
+            )}
           </div>
         )}
 
-
         <div className="rounded-xl border border-gray-200 p-5">
-
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-            Hallazgo
+            Comportamiento de recompra
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            Los compradores de{" "}
-            <strong>
-              primera vez
-            </strong>{" "}
-            conforman el segmento más amplio
-            de la base de clientes.
+            Los compradores de primera vez presentan una tasa de recompra aproximada del 82.1%, superior a los demás segmentos.
           </p>
-
         </div>
-
 
         <div className="rounded-xl border border-gray-200 p-5">
-
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-            Análisis histórico completo
-          </p>
-
-          <p className="mt-2 text-sm leading-6 text-gray-700">
-            Este segmento también presentó
-            una tasa de recompra aproximada de{" "}
-            <strong>
-              82.1%
-            </strong>,
-            superior a Inversionista y
-            Alto patrimonio durante el
-            periodo analizado.
-          </p>
-
-        </div>
-
-
-        <div className="rounded-xl border-l-4 border-gray-900 bg-gray-50 p-5">
-
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
             Oportunidad
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            El comprador de primera vez no
-            debería tratarse únicamente como
-            una adquisición inicial:
-            representa una oportunidad
-            relevante de fidelización y
-            recompra.
+            Los compradores de primera vez representan una oportunidad relevante para estrategias de fidelización, seguimiento postventa y recompra.
           </p>
-
         </div>
 
-
-        <div className="rounded-xl border border-gray-200 p-5">
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
 
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
             Siguiente pregunta
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            Si los clientes vuelven a comprar,
-            ¿existen momentos específicos en
-            los que la recurrencia aumenta?
+            ¿En qué momento después de la primera compra tienen mayor probabilidad de volver a comprar?
           </p>
 
         </div>
-
       </div>
-
     </div>
   );
 }

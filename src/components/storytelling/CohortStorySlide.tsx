@@ -4,7 +4,6 @@ import type {
   CohortRetentionRow,
 } from "@/lib/types";
 
-
 type CohortStorySlideProps = {
   cohortRetention: CohortRetentionRow[];
 };
@@ -105,7 +104,6 @@ export default function CohortStorySlide({
     )
     .slice(0, 3);
 
-
   return (
     <div className="grid flex-1 gap-6 lg:grid-cols-[1.8fr_1fr]">
 
@@ -113,13 +111,12 @@ export default function CohortStorySlide({
       <div className="min-w-0 rounded-xl border border-gray-200 p-5">
 
         <div>
-          <h3 className="font-semibold text-gray-900">
-            Recurrencia por Cohorte
+          <h3 className="text-sm font-semibold text-gray-900">
+            Recurrencia por Mes Después de la Primera Compra
           </h3>
 
           <p className="mt-1 text-xs text-gray-500">
-            Porcentaje de clientes que vuelve a comprar
-            después de su primera adquisición.
+            Promedio de recompra entre las cohortes observables.
           </p>
         </div>
 
@@ -127,86 +124,67 @@ export default function CohortStorySlide({
         <div className="mt-5 overflow-x-auto">
 
           {/* Compact recurrence heat strip */}
-            <div className="min-w-0 rounded-xl border border-gray-200 p-5">
+          <div className="min-w-0 rounded-xl border border-gray-200 p-5">
 
             <div>
                 <h3 className="font-semibold text-gray-900">
-                ¿Cuándo vuelven a comprar?
+                  Recurrencia por Mes Después de la Primera Compra
                 </h3>
 
                 <p className="mt-1 text-xs text-gray-500">
-                Recurrencia promedio ponderada por mes
-                después de la primera compra.
+                  Promedio de recompra entre las cohortes observables.
                 </p>
             </div>
 
 
-            <div className="mt-8">
+            
+            <div className="mt-6 grid grid-cols-4 gap-3 sm:grid-cols-8">
 
-                <div className="grid grid-cols-4 gap-2 sm:grid-cols-8">
-
-                {monthPerformance
-                    .slice(0, 16)
-                    .map((month) => {
-
-                    const isTopMonth =
-                        topMonths.some(
-                        (topMonth) =>
-                            topMonth.monthIndex ===
-                            month.monthIndex
-                        );
-
-                    return (
-                        <div
-                        key={month.monthIndex}
-                        className="text-center"
-                        >
-
-                        <p className="mb-2 text-[10px] font-semibold text-gray-400">
-                            M{month.monthIndex}
-                        </p>
-
-                        <div
-                            className={`flex h-14 items-center justify-center rounded-lg text-xs font-semibold ${
-                            isTopMonth
-                                ? "bg-gray-900 text-white ring-2 ring-gray-400 ring-offset-2"
-                                : getCellStyle(
-                                    month.retention
-                                )
-                            }`}
-                        >
-                            {month.retention.toFixed(
-                            1
-                            )}
-                            %
-                        </div>
-
-                        </div>
+              {monthPerformance
+                .slice(0, 16)
+                .map((month) => {
+                  const isTopMonth =
+                    topMonths.some(
+                      (top) =>
+                        top.monthIndex ===
+                        month.monthIndex
                     );
-                    })}
 
-                </div>
+                  return (
+                    <div
+                      key={
+                        month.monthIndex
+                      }
+                      className="text-center"
+                    >
+
+                      <p className="mb-2 text-xs font-medium text-gray-500">
+                        M{month.monthIndex}
+                      </p>
+
+                      <div
+                        className={`rounded-lg px-2 py-3 text-xs font-semibold ${
+                          isTopMonth
+                            ? "bg-gray-900 text-white ring-2 ring-gray-400 ring-offset-2"
+                            : getCellStyle(
+                                month.retention
+                              )
+                        }`}
+                      >
+                        {month.retention.toFixed(
+                          1
+                        )}
+                        %
+                      </div>
+
+                    </div>
+                  );
+                })}
 
             </div>
 
+          </div>
 
-            <div className="mt-8 rounded-xl bg-gray-50 p-4">
-
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                Patrón observado
-                </p>
-
-                <p className="mt-2 text-sm leading-6 text-gray-700">
-                Los meses destacados muestran los
-                mayores niveles de recurrencia agregada,
-                evidenciando que las recompras aparecen
-                en ventanas específicas y no de forma
-                uniforme.
-                </p>
-
-            </div>
-
-            </div>
 
         </div>
 
@@ -228,10 +206,8 @@ export default function CohortStorySlide({
             Insight principal
           </p>
 
-          <p className="mt-3 text-xl font-semibold leading-7">
-            La recompra no ocurre de manera uniforme:
-            aparecen oleadas de recurrencia en momentos
-            específicos posteriores a la primera compra.
+          <p className="mt-3 text-lg font-semibold leading-7">
+            La recompra no ocurre de manera uniforme. El comportamiento de las cohortes muestra oleadas de mayor recurrencia en determinados meses.
           </p>
 
         </div>
@@ -240,36 +216,25 @@ export default function CohortStorySlide({
         {topMonths.length > 0 && (
           <div className="rounded-xl border border-gray-200 p-5">
 
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              Ventanas destacadas
-            </p>
+  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+    Ventanas destacadas
+  </p>
 
-            <div className="mt-3 flex flex-wrap gap-2">
+  <p className="mt-2 text-sm leading-6 text-gray-700">
+    Los meses con mayor recurrencia promedio son{" "}
 
-              {topMonths.map(
-                (month) => (
-                  <span
-                    key={month.monthIndex}
-                    className="rounded-lg bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-800"
-                  >
-                    M{month.monthIndex}
-                    {" · "}
-                    {month.retention.toFixed(
-                      1
-                    )}
-                    %
-                  </span>
-                )
-              )}
 
-            </div>
+    <span className="font-semibold text-gray-900">
+      {topMonths
+        .map(
+          (month) =>
+            `M${month.monthIndex}`
+        )
+        .join(", ")}
+    </span>
+  </p>
 
-            <p className="mt-3 text-xs leading-5 text-gray-500">
-              Meses con mayor recurrencia agregada
-              entre las cohortes observables.
-            </p>
-
-          </div>
+</div>
         )}
 
 
@@ -280,30 +245,20 @@ export default function CohortStorySlide({
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            El patrón sugiere que existen ventanas
-            temporales donde aumenta la probabilidad
-            de que un cliente realice otra compra.
+            La recompra no ocurre de manera uniforme. El comportamiento de las cohortes muestra oleadas de mayor recurrencia en determinados meses.
           </p>
 
         </div>
-
-
-        <div className="rounded-xl border-l-4 border-gray-900 bg-gray-50 p-5">
-
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
             Acción recomendada
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            Programar campañas de reactivación,
-            seguimiento comercial y nuevas propuestas
-            de inversión antes de las ventanas
-            históricas de mayor recurrencia.
+            Programar campañas de CRM y reactivación antes de las ventanas con mayor recurrencia para aumentar la probabilidad de recompra.         
           </p>
 
         </div>
-
-
         <div className="rounded-xl border border-gray-200 p-5">
 
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
@@ -311,14 +266,11 @@ export default function CohortStorySlide({
           </p>
 
           <p className="mt-2 text-sm leading-6 text-gray-700">
-            ¿Cómo convertimos todos estos hallazgos
-            en prioridades comerciales concretas?
+            ¿Cómo podemos convertir estos hallazgos en prioridades y acciones comerciales?
           </p>
 
         </div>
-
       </div>
-
     </div>
   );
 }

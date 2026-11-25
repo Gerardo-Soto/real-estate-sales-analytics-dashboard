@@ -393,7 +393,7 @@ function Home() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xs text-gray-400",
-                                                        children: revenueComparison.currentYear
+                                                        children: revenueComparison.previousYear
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/page.tsx",
                                                         lineNumber: 437,
@@ -401,7 +401,7 @@ function Home() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xl font-semibold text-gray-900",
-                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(revenueComparison.currentRevenue)
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(revenueComparison.previousRevenue)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/page.tsx",
                                                         lineNumber: 441,
@@ -417,24 +417,24 @@ function Home() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xs text-gray-400",
-                                                        children: revenueComparison.previousYear
+                                                        children: revenueComparison.currentYear
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 450,
+                                                        lineNumber: 449,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xl font-semibold text-gray-900",
-                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(revenueComparison.previousRevenue)
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(revenueComparison.currentRevenue)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 454,
+                                                        lineNumber: 453,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/page.tsx",
-                                                lineNumber: 449,
+                                                lineNumber: 448,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -444,7 +444,7 @@ function Home() {
                                                         children: "YoY"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 463,
+                                                        lineNumber: 461,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -456,13 +456,13 @@ function Home() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 467,
+                                                        lineNumber: 465,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/page.tsx",
-                                                lineNumber: 462,
+                                                lineNumber: 460,
                                                 columnNumber: 9
                                             }, this)
                                         ]
@@ -493,14 +493,14 @@ function Home() {
                         onResetFilters: resetFilters
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 491,
+                        lineNumber: 489,
                         columnNumber: 9
                     }, this),
                     !hasResults ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$EmptyState$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         onResetFilters: resetFilters
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 503,
+                        lineNumber: 501,
                         columnNumber: 3
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
@@ -513,7 +513,7 @@ function Home() {
                                         subtitle: t.kpis.totalRevenueSubtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 512,
+                                        lineNumber: 510,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$kpis$2f$KpiCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -522,7 +522,7 @@ function Home() {
                                         subtitle: t.kpis.totalSalesSubtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 520,
+                                        lineNumber: 518,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$kpis$2f$KpiCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -531,7 +531,7 @@ function Home() {
                                         subtitle: t.kpis.averageTicketSubtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 526,
+                                        lineNumber: 524,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$kpis$2f$KpiCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -540,13 +540,13 @@ function Home() {
                                         subtitle: t.kpis.totalCommissionSubtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 534,
+                                        lineNumber: 532,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 511,
+                                lineNumber: 509,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -555,12 +555,12 @@ function Home() {
                                     data: monthlyRevenue
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 544,
+                                    lineNumber: 542,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 543,
+                                lineNumber: 541,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -570,20 +570,20 @@ function Home() {
                                         data: revenueByCity
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 550,
+                                        lineNumber: 548,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$charts$2f$RevenueByChannelChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         data: revenueByChannel
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 554,
+                                        lineNumber: 552,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 549,
+                                lineNumber: 547,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -593,26 +593,26 @@ function Home() {
                                         data: revenueByPropertyType
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 560,
+                                        lineNumber: 558,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$charts$2f$BuyerProfileChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         data: buyerProfiles
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 564,
+                                        lineNumber: 562,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 559,
+                                lineNumber: 557,
                                 columnNumber: 5
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 510,
+                        lineNumber: 508,
                         columnNumber: 3
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -621,24 +621,24 @@ function Home() {
                             data: cohortRetention
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 575,
+                            lineNumber: 573,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 574,
+                        lineNumber: 572,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         className: "mt-6",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$insights$2f$ExecutiveInsights$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 581,
+                            lineNumber: 579,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 580,
+                        lineNumber: 578,
                         columnNumber: 9
                     }, this)
                 ]
@@ -659,7 +659,7 @@ function Home() {
                 cohortRetention: cohortRetention
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 584,
+                lineNumber: 582,
                 columnNumber: 7
             }, this)
         ]
@@ -2169,7 +2169,6 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/Cell.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Legend$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/Legend.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$polar$2f$Pie$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/polar/Pie.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$PieChart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/chart/PieChart.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/ResponsiveContainer.js [app-client] (ecmascript)");
@@ -2194,7 +2193,7 @@ function BuyerProfileSlide({ buyerProfiles }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 className: "font-semibold text-gray-900",
-                                children: "Distribución de Clientes"
+                                children: "Distribución por Segmento"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
                                 lineNumber: 42,
@@ -2215,7 +2214,7 @@ function BuyerProfileSlide({ buyerProfiles }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-4 h-80",
+                        className: "mt-5 h-85",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ResponsiveContainer"], {
                             width: "100%",
                             height: "100%",
@@ -2225,14 +2224,21 @@ function BuyerProfileSlide({ buyerProfiles }) {
                                         data: buyerProfiles,
                                         dataKey: "customers",
                                         nameKey: "buyerSegment",
+                                        cx: "50%",
+                                        cy: "45%",
                                         innerRadius: 75,
                                         outerRadius: 115,
-                                        paddingAngle: 3,
-                                        children: buyerProfiles.map((profile, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Cell"], {
+                                        paddingAngle: 2,
+                                        labelLine: false,
+                                        label: (props)=>{
+                                            const percentage = Number(props.payload?.percentage ?? 0);
+                                            return `${percentage.toFixed(1)}%`;
+                                        },
+                                        children: buyerProfiles.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Cell"], {
                                                 fill: chartColors[index % chartColors.length]
-                                            }, profile.buyerSegment, false, {
+                                            }, item.buyerSegment, false, {
                                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 85,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
@@ -2241,21 +2247,16 @@ function BuyerProfileSlide({ buyerProfiles }) {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
-                                        formatter: (value, name, props)=>{
-                                            const percentage = props.payload.percentage;
+                                        formatter: (value, _name, props)=>{
+                                            const percentage = Number(props.payload?.percentage ?? 0);
                                             return [
-                                                `${Number(value).toLocaleString()} clientes (${percentage.toFixed(1)}%)`,
-                                                name
+                                                `${Number(value).toLocaleString("es-MX")} clientes (${percentage.toFixed(1)}%)`,
+                                                props.payload?.buyerSegment
                                             ];
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                        lineNumber: 88,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Legend$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Legend"], {}, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -2273,6 +2274,51 @@ function BuyerProfileSlide({ buyerProfiles }) {
                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
                         lineNumber: 53,
                         columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-2 flex flex-wrap justify-center gap-x-5 gap-y-2",
+                        children: buyerProfiles.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "h-3 w-3 rounded-sm",
+                                        style: {
+                                            backgroundColor: chartColors[index % chartColors.length]
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 9
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm text-gray-600",
+                                        children: item.buyerSegment
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                                        lineNumber: 151,
+                                        columnNumber: 9
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm font-semibold text-gray-900",
+                                        children: [
+                                            item.percentage.toFixed(1),
+                                            "%"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                                        lineNumber: 155,
+                                        columnNumber: 9
+                                    }, this)
+                                ]
+                            }, item.buyerSegment, true, {
+                                fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                                lineNumber: 135,
+                                columnNumber: 7
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                        lineNumber: 131,
+                        columnNumber: 1
                     }, this)
                 ]
             }, void 0, true, {
@@ -2291,28 +2337,31 @@ function BuyerProfileSlide({ buyerProfiles }) {
                                 children: "Segmento principal"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 124,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-3 text-xl font-semibold leading-7",
+                            topSegment && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-3 text-lg font-semibold leading-7",
                                 children: [
-                                    topSegment.buyerSegment,
+                                    "El segmento con mayor participación es",
                                     " ",
-                                    "representa el",
-                                    " ",
-                                    topSegment.percentage.toFixed(1),
-                                    "% de los clientes analizados."
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: topSegment.buyerSegment
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
+                                        lineNumber: 184,
+                                        columnNumber: 17
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 128,
-                                columnNumber: 13
+                                lineNumber: 181,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                        lineNumber: 122,
+                        lineNumber: 174,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2320,36 +2369,24 @@ function BuyerProfileSlide({ buyerProfiles }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                children: "Hallazgo"
+                                children: "Comportamiento de recompra"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 144,
+                                lineNumber: 193,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: [
-                                    "Los compradores de",
-                                    " ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                        children: "primera vez"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                        lineNumber: 150,
-                                        columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    "conforman el segmento más amplio de la base de clientes."
-                                ]
-                            }, void 0, true, {
+                                children: "Los compradores de primera vez presentan una tasa de recompra aproximada del 82.1%, superior a los demás segmentos."
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 148,
+                                lineNumber: 197,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                        lineNumber: 142,
+                        lineNumber: 192,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2357,91 +2394,55 @@ function BuyerProfileSlide({ buyerProfiles }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                children: "Análisis histórico completo"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 162,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: [
-                                    "Este segmento también presentó una tasa de recompra aproximada de",
-                                    " ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                        children: "82.1%"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                        lineNumber: 169,
-                                        columnNumber: 13
-                                    }, this),
-                                    ", superior a Inversionista y Alto patrimonio durante el periodo analizado."
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 166,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                        lineNumber: 160,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-xl border-l-4 border-gray-900 bg-gray-50 p-5",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xs font-semibold uppercase tracking-wider text-gray-500",
                                 children: "Oportunidad"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 182,
+                                lineNumber: 203,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: "El comprador de primera vez no debería tratarse únicamente como una adquisición inicial: representa una oportunidad relevante de fidelización y recompra."
+                                children: "Los compradores de primera vez representan una oportunidad relevante para estrategias de fidelización, seguimiento postventa y recompra."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 186,
+                                lineNumber: 207,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                        lineNumber: 180,
+                        lineNumber: 202,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-xl border border-gray-200 p-5",
+                        className: "rounded-xl border border-gray-200 bg-gray-50 p-5",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
                                 children: "Siguiente pregunta"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 200,
+                                lineNumber: 214,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: "Si los clientes vuelven a comprar, ¿existen momentos específicos en los que la recurrencia aumenta?"
+                                children: "¿En qué momento después de la primera compra tienen mayor probabilidad de volver a comprar?"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                                lineNumber: 204,
+                                lineNumber: 218,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                        lineNumber: 198,
+                        lineNumber: 212,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/storytelling/BuyerProfileSlide.tsx",
-                lineNumber: 119,
+                lineNumber: 171,
                 columnNumber: 7
             }, this)
         ]
@@ -2517,25 +2518,25 @@ function CohortStorySlide({ cohortRetention }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "font-semibold text-gray-900",
-                                children: "Recurrencia por Cohorte"
+                                className: "text-sm font-semibold text-gray-900",
+                                children: "Recurrencia por Mes Después de la Primera Compra"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 116,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-1 text-xs text-gray-500",
-                                children: "Porcentaje de clientes que vuelve a comprar después de su primera adquisición."
+                                children: "Promedio de recompra entre las cohortes observables."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 120,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 115,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2547,108 +2548,76 @@ function CohortStorySlide({ cohortRetention }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                             className: "font-semibold text-gray-900",
-                                            children: "¿Cuándo vuelven a comprar?"
+                                            children: "Recurrencia por Mes Después de la Primera Compra"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 130,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mt-1 text-xs text-gray-500",
-                                            children: "Recurrencia promedio ponderada por mes después de la primera compra."
+                                            children: "Promedio de recompra entre las cohortes observables."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 134,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 129,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mt-8",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "grid grid-cols-4 gap-2 sm:grid-cols-8",
-                                        children: monthPerformance.slice(0, 16).map((month)=>{
-                                            const isTopMonth = topMonths.some((topMonth)=>topMonth.monthIndex === month.monthIndex);
-                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-center",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "mb-2 text-[10px] font-semibold text-gray-400",
-                                                        children: [
-                                                            "M",
-                                                            month.monthIndex
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                                        lineNumber: 165,
-                                                        columnNumber: 25
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: `flex h-14 items-center justify-center rounded-lg text-xs font-semibold ${isTopMonth ? "bg-gray-900 text-white ring-2 ring-gray-400 ring-offset-2" : getCellStyle(month.retention)}`,
-                                                        children: [
-                                                            month.retention.toFixed(1),
-                                                            "%"
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                                        lineNumber: 169,
-                                                        columnNumber: 25
-                                                    }, this)
-                                                ]
-                                            }, month.monthIndex, true, {
-                                                fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                                lineNumber: 160,
-                                                columnNumber: 25
-                                            }, this);
-                                        })
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                        lineNumber: 146,
-                                        columnNumber: 17
-                                    }, this)
+                                    className: "mt-6 grid grid-cols-4 gap-3 sm:grid-cols-8",
+                                    children: monthPerformance.slice(0, 16).map((month)=>{
+                                        const isTopMonth = topMonths.some((top)=>top.monthIndex === month.monthIndex);
+                                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-center",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "mb-2 text-xs font-medium text-gray-500",
+                                                    children: [
+                                                        "M",
+                                                        month.monthIndex
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
+                                                    lineNumber: 161,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `rounded-lg px-2 py-3 text-xs font-semibold ${isTopMonth ? "bg-gray-900 text-white ring-2 ring-gray-400 ring-offset-2" : getCellStyle(month.retention)}`,
+                                                    children: [
+                                                        month.retention.toFixed(1),
+                                                        "%"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
+                                                    lineNumber: 165,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, month.monthIndex, true, {
+                                            fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
+                                            lineNumber: 154,
+                                            columnNumber: 21
+                                        }, this);
+                                    })
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                    lineNumber: 144,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mt-8 rounded-xl bg-gray-50 p-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                            children: "Patrón observado"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                            lineNumber: 195,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mt-2 text-sm leading-6 text-gray-700",
-                                            children: "Los meses destacados muestran los mayores niveles de recurrencia agregada, evidenciando que las recompras aparecen en ventanas específicas y no de forma uniforme."
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                            lineNumber: 199,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 141,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                            lineNumber: 130,
-                            columnNumber: 13
+                            lineNumber: 127,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 127,
+                        lineNumber: 124,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2656,13 +2625,13 @@ function CohortStorySlide({ cohortRetention }) {
                         children: "M0 = primera compra · 0% = periodo observado sin recompra · — = periodo todavía no observable"
                     }, void 0, false, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 214,
+                        lineNumber: 192,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                lineNumber: 113,
+                lineNumber: 111,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2676,21 +2645,21 @@ function CohortStorySlide({ cohortRetention }) {
                                 children: "Insight principal"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 227,
+                                lineNumber: 205,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-3 text-xl font-semibold leading-7",
-                                children: "La recompra no ocurre de manera uniforme: aparecen oleadas de recurrencia en momentos específicos posteriores a la primera compra."
+                                className: "mt-3 text-lg font-semibold leading-7",
+                                children: "La recompra no ocurre de manera uniforme. El comportamiento de las cohortes muestra oleadas de mayor recurrencia en determinados meses."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 231,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 225,
+                        lineNumber: 203,
                         columnNumber: 9
                     }, this),
                     topMonths.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2701,42 +2670,32 @@ function CohortStorySlide({ cohortRetention }) {
                                 children: "Ventanas destacadas"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 243,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-3 flex flex-wrap gap-2",
-                                children: topMonths.map((month)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "rounded-lg bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-800",
-                                        children: [
-                                            "M",
-                                            month.monthIndex,
-                                            " · ",
-                                            month.retention.toFixed(1),
-                                            "%"
-                                        ]
-                                    }, month.monthIndex, true, {
-                                        fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                        lineNumber: 251,
-                                        columnNumber: 19
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 247,
-                                columnNumber: 13
+                                lineNumber: 219,
+                                columnNumber: 3
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-3 text-xs leading-5 text-gray-500",
-                                children: "Meses con mayor recurrencia agregada entre las cohortes observables."
-                            }, void 0, false, {
+                                className: "mt-2 text-sm leading-6 text-gray-700",
+                                children: [
+                                    "Los meses con mayor recurrencia promedio son",
+                                    " ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-semibold text-gray-900",
+                                        children: topMonths.map((month)=>`M${month.monthIndex}`).join(", ")
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
+                                        lineNumber: 227,
+                                        columnNumber: 5
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 267,
-                                columnNumber: 13
+                                lineNumber: 223,
+                                columnNumber: 3
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 241,
+                        lineNumber: 217,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2747,46 +2706,46 @@ function CohortStorySlide({ cohortRetention }) {
                                 children: "Interpretación"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 278,
+                                lineNumber: 243,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: "El patrón sugiere que existen ventanas temporales donde aumenta la probabilidad de que un cliente realice otra compra."
+                                children: "La recompra no ocurre de manera uniforme. El comportamiento de las cohortes muestra oleadas de mayor recurrencia en determinados meses."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 282,
+                                lineNumber: 247,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 276,
+                        lineNumber: 241,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-xl border-l-4 border-gray-900 bg-gray-50 p-5",
+                        className: "rounded-xl border border-gray-200 bg-gray-50 p-5",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xs font-semibold uppercase tracking-wider text-gray-500",
+                                className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
                                 children: "Acción recomendada"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 293,
+                                lineNumber: 253,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: "Programar campañas de reactivación, seguimiento comercial y nuevas propuestas de inversión antes de las ventanas históricas de mayor recurrencia."
+                                children: "Programar campañas de CRM y reactivación antes de las ventanas con mayor recurrencia para aumentar la probabilidad de recompra."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 297,
+                                lineNumber: 257,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 291,
+                        lineNumber: 252,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2797,33 +2756,33 @@ function CohortStorySlide({ cohortRetention }) {
                                 children: "Siguiente pregunta"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 309,
+                                lineNumber: 264,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-sm leading-6 text-gray-700",
-                                children: "¿Cómo convertimos todos estos hallazgos en prioridades comerciales concretas?"
+                                children: "¿Cómo podemos convertir estos hallazgos en prioridades y acciones comerciales?"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                                lineNumber: 313,
+                                lineNumber: 268,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                        lineNumber: 307,
+                        lineNumber: 262,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-                lineNumber: 223,
+                lineNumber: 201,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/storytelling/CohortStorySlide.tsx",
-        lineNumber: 110,
+        lineNumber: 108,
         columnNumber: 5
     }, this);
 }
@@ -3361,10 +3320,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/Tooltip.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/XAxis.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/YAxis.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/i18n/LanguageContext.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/analytics.ts [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -3378,19 +3334,15 @@ function formatRevenue(value) {
     }
     return `$${value.toLocaleString()}`;
 }
-function formatMonth(month, language) {
+function formatMonth(month) {
     const [year, monthNumber] = month.split("-");
     const date = new Date(Number(year), Number(monthNumber) - 1);
-    const locale = language === "en" ? "en-US" : "es-MX";
-    return date.toLocaleDateString(locale, {
+    return date.toLocaleDateString("es-MX", {
         month: "short",
         year: "2-digit"
     });
 }
 function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
-    _s();
-    const { t, language } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
-    const copy = t.storytelling.executiveSummary;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-1 flex-col",
         children: [
@@ -3402,7 +3354,57 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xs font-medium text-gray-500",
-                                children: copy.totalRevenue
+                                children: "Ingreso Total"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 82,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-1 text-2xl font-bold text-gray-900",
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalRevenue)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 86,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                        lineNumber: 81,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "rounded-xl bg-gray-50 p-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-xs font-medium text-gray-500",
+                                children: "Ventas Totales"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 95,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-1 text-2xl font-bold text-gray-900",
+                                children: kpis.totalSales.toLocaleString()
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 99,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "rounded-xl bg-gray-50 p-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-xs font-medium text-gray-500",
+                                children: "Ticket Promedio"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                 lineNumber: 106,
@@ -3410,7 +3412,7 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-1 text-2xl font-bold text-gray-900",
-                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalRevenue)
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.averageTicket)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                 lineNumber: 110,
@@ -3427,7 +3429,7 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xs font-medium text-gray-500",
-                                children: copy.totalSales
+                                children: "Comisión Total"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                 lineNumber: 119,
@@ -3435,7 +3437,7 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-1 text-2xl font-bold text-gray-900",
-                                children: kpis.totalSales.toLocaleString(language === "en" ? "en-US" : "es-MX")
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalCommission)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                 lineNumber: 123,
@@ -3446,61 +3448,11 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                         lineNumber: 118,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-xl bg-gray-50 p-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xs font-medium text-gray-500",
-                                children: copy.averageTicket
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 134,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-1 text-2xl font-bold text-gray-900",
-                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.averageTicket)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 138,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                        lineNumber: 133,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-xl bg-gray-50 p-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xs font-medium text-gray-500",
-                                children: copy.totalCommission
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 147,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-1 text-2xl font-bold text-gray-900",
-                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalCommission)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 151,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                        lineNumber: 146,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                lineNumber: 103,
+                lineNumber: 79,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3513,24 +3465,24 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "font-semibold text-gray-900",
-                                        children: copy.revenueTrendTitle
+                                        children: "Evolución de ingresos"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 143,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-1 text-xs text-gray-500",
-                                        children: copy.revenueTrendSubtitle
+                                        children: "Comportamiento mensual durante el periodo analizado."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 147,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 169,
+                                lineNumber: 141,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3546,18 +3498,18 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                                 vertical: false
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 194,
+                                                lineNumber: 164,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["XAxis"], {
                                                 dataKey: "month",
-                                                tickFormatter: (value)=>formatMonth(String(value), language),
+                                                tickFormatter: (value)=>formatMonth(String(value)),
                                                 tick: {
                                                     fontSize: 10
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 200,
+                                                lineNumber: 170,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["YAxis"], {
@@ -3568,18 +3520,18 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                                 width: 60
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 185,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
-                                                labelFormatter: (label)=>formatMonth(String(label), language),
+                                                labelFormatter: (label)=>formatMonth(String(label)),
                                                 formatter: (value)=>[
                                                         formatRevenue(Number(value)),
-                                                        copy.revenue
+                                                        "Ingresos"
                                                     ]
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 196,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Line$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Line"], {
@@ -3590,29 +3542,29 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                                 dot: false
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 247,
+                                                lineNumber: 215,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 160,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 156,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 184,
+                                lineNumber: 154,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                        lineNumber: 167,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3623,28 +3575,74 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                        children: copy.messageLabel
+                                        children: "Mensaje Clave"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                        lineNumber: 237,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-3 text-xl font-semibold leading-7",
+                                        children: [
+                                            "El negocio generó más de",
+                                            " ",
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalRevenue),
+                                            " ",
+                                            "durante el periodo analizado."
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                        lineNumber: 242,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 235,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl border border-gray-200 p-5",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
+                                        children: "Hallazgo"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                        lineNumber: 255,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-2 text-sm leading-6 text-gray-700",
+                                        children: "Los ingresos muestran ciclos de crecimiento y desaceleración a lo largo del periodo, indicando que el desempeño comercial no es uniforme mes a mes."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                        lineNumber: 259,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
+                                lineNumber: 253,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl border border-gray-200 p-5",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
+                                        children: "Pregunta"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                         lineNumber: 269,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-3 text-xl font-semibold leading-7",
-                                        children: [
-                                            copy.messageText,
-                                            " ",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(kpis.totalRevenue)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                                lineNumber: 277,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        className: "mt-2 text-sm leading-6 text-gray-700",
+                                        children: "¿Cómo ha evolucionado el desempeño comercial a lo largo del periodo analizado?"
+                                    }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 273,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -3652,81 +3650,26 @@ function ExecutiveSummarySlide({ kpis, monthlyRevenue }) {
                                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
                                 lineNumber: 267,
                                 columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "rounded-xl border border-gray-200 p-5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                        children: copy.findingLabel
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 289,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-2 text-sm leading-6 text-gray-700",
-                                        children: copy.findingText
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 293,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 287,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "rounded-xl border border-gray-200 p-5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                        children: copy.questionLabel
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 302,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-2 text-sm leading-6 text-gray-700",
-                                        children: copy.questionText
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                        lineNumber: 306,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                                lineNumber: 300,
-                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                        lineNumber: 265,
+                        lineNumber: 233,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-                lineNumber: 163,
+                lineNumber: 135,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/storytelling/ExecutiveSummarySlide.tsx",
-        lineNumber: 99,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
-_s(ExecutiveSummarySlide, "t4wfM5ZHx1N8Eb87Llpd6C+vywA=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"]
-    ];
-});
 _c = ExecutiveSummarySlide;
 var _c;
 __turbopack_context__.k.register(_c, "ExecutiveSummarySlide");
@@ -4090,7 +4033,6 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/i18n/LanguageContext.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$ExecutiveSummarySlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/storytelling/ExecutiveSummarySlide.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$CommercialPerformanceSlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/storytelling/CommercialPerformanceSlide.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$BuyerProfileSlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/storytelling/BuyerProfileSlide.tsx [app-client] (ecmascript)");
@@ -4105,38 +4047,36 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
+const slides = [
+    {
+        id: "executive-summary",
+        title: "Resumen Ejecutivo",
+        subtitle: "Una visión general del desempeño comercial."
+    },
+    {
+        id: "commercial-performance",
+        title: "Desempeño Comercial",
+        subtitle: "¿Qué mercados, canales y propiedades impulsan los ingresos?"
+    },
+    {
+        id: "buyer-profile",
+        title: "Perfil del Comprador",
+        subtitle: "¿Quiénes son nuestros clientes y cómo se comportan?"
+    },
+    {
+        id: "cohort-story",
+        title: "Oleadas de Recompra",
+        subtitle: "¿Cuándo vuelven a comprar los clientes?"
+    },
+    {
+        id: "recommendations",
+        title: "Conclusiones",
+        subtitle: "Principales oportunidades y acciones recomendadas."
+    }
+];
 function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCity, revenueByChannel, revenueByPropertyType, buyerProfiles, cohortRetention }) {
     _s();
-    const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
     const [currentSlide, setCurrentSlide] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const slides = [
-        {
-            id: "executive-summary",
-            title: t.storytelling.executiveSummaryTitle,
-            subtitle: t.storytelling.executiveSummarySubtitle
-        },
-        {
-            id: "commercial-performance",
-            title: t.storytelling.commercialPerformanceTitle,
-            subtitle: t.storytelling.commercialPerformanceSubtitle
-        },
-        {
-            id: "buyer-profile",
-            title: t.storytelling.buyerProfileTitle,
-            subtitle: t.storytelling.buyerProfileSubtitle
-        },
-        {
-            id: "cohort-story",
-            title: t.storytelling.cohortStoryTitle,
-            subtitle: t.storytelling.cohortStorySubtitle
-        },
-        {
-            id: "recommendations",
-            title: t.storytelling.recommendationsTitle,
-            subtitle: t.storytelling.recommendationsSubtitle
-        }
-    ];
     const totalSlides = slides.length;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "StorytellingModal.useEffect": ()=>{
@@ -4202,7 +4142,7 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
         className: "fixed inset-0 z-50 flex items-center justify-center bg-gray-950/80 p-4 backdrop-blur-sm",
         role: "dialog",
         "aria-modal": "true",
-        "aria-label": t.storytelling.modalTitle,
+        "aria-label": "Data storytelling",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex max-h-[94vh] w-full max-w-7xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl",
             children: [
@@ -4213,24 +4153,24 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xs font-semibold uppercase tracking-wider text-gray-400",
-                                    children: t.storytelling.modalTitle
+                                    children: "Data Stotytelling"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                    lineNumber: 254,
+                                    lineNumber: 225,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mt-1 text-sm text-gray-500",
-                                    children: t.storytelling.modalSubtitle
+                                    children: "Real Estate Sales Analytics"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                            lineNumber: 252,
+                            lineNumber: 223,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4239,40 +4179,37 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "text-sm font-medium text-gray-500",
                                     children: [
-                                        t.storytelling.slide,
-                                        " ",
                                         currentSlide + 1,
-                                        " ",
-                                        t.storytelling.of,
+                                        " /",
                                         " ",
                                         totalSlides
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 238,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "button",
                                     onClick: onClose,
                                     className: "flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-xl text-gray-500 transition hover:bg-gray-100 hover:text-gray-900",
-                                    "aria-label": t.storytelling.close,
+                                    "aria-label": "Cerrar storytelling",
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                    lineNumber: 281,
+                                    lineNumber: 244,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                            lineNumber: 271,
+                            lineNumber: 236,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                    lineNumber: 250,
+                    lineNumber: 221,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4288,7 +4225,7 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                         children: slide.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                        lineNumber: 305,
+                                        lineNumber: 266,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4296,13 +4233,13 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                         children: slide.subtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                        lineNumber: 309,
+                                        lineNumber: 270,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 303,
+                                lineNumber: 264,
                                 columnNumber: 13
                             }, this),
                             currentSlide === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$ExecutiveSummarySlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4310,7 +4247,7 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                 monthlyRevenue: monthlyRevenue
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 319,
+                                lineNumber: 280,
                                 columnNumber: 15
                             }, this),
                             currentSlide === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$CommercialPerformanceSlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4319,21 +4256,21 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                 revenueByPropertyType: revenueByPropertyType
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 329,
+                                lineNumber: 290,
                                 columnNumber: 15
                             }, this),
                             currentSlide === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$BuyerProfileSlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 buyerProfiles: buyerProfiles
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 344,
+                                lineNumber: 305,
                                 columnNumber: 15
                             }, this),
                             currentSlide === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$CohortStorySlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 cohortRetention: cohortRetention
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 353,
+                                lineNumber: 314,
                                 columnNumber: 15
                             }, this),
                             currentSlide === 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$storytelling$2f$RecommendationsSlide$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4343,18 +4280,18 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                 buyerProfiles: buyerProfiles
                             }, void 0, false, {
                                 fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                lineNumber: 362,
+                                lineNumber: 323,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                        lineNumber: 301,
+                        lineNumber: 262,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                    lineNumber: 299,
+                    lineNumber: 260,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4365,14 +4302,10 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                             onClick: goToPreviousSlide,
                             disabled: isFirstSlide,
                             className: "rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30",
-                            children: [
-                                "←",
-                                " ",
-                                t.storytelling.previous
-                            ]
-                        }, void 0, true, {
+                            children: "← Anterior"
+                        }, void 0, false, {
                             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                            lineNumber: 387,
+                            lineNumber: 348,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4381,15 +4314,15 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                                     type: "button",
                                     onClick: ()=>setCurrentSlide(index),
                                     className: `h-2.5 rounded-full transition-all ${index === currentSlide ? "w-8 bg-gray-900" : "w-2.5 bg-gray-300 hover:bg-gray-400"}`,
-                                    "aria-label": `${t.storytelling.slide} ${index + 1}: ${slideItem.title}`
+                                    "aria-label": `Ir a diapositiva ${index + 1}`
                                 }, slideItem.id, false, {
                                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                                    lineNumber: 412,
+                                    lineNumber: 369,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                            lineNumber: 405,
+                            lineNumber: 362,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4397,39 +4330,31 @@ function StorytellingModal({ isOpen, onClose, kpis, monthlyRevenue, revenueByCit
                             onClick: goToNextSlide,
                             disabled: isLastSlide,
                             className: "rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-30",
-                            children: [
-                                t.storytelling.next,
-                                " ",
-                                "→"
-                            ]
-                        }, void 0, true, {
+                            children: "Siguiente →"
+                        }, void 0, false, {
                             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                            lineNumber: 440,
+                            lineNumber: 395,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-                    lineNumber: 385,
+                    lineNumber: 346,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-            lineNumber: 246,
+            lineNumber: 217,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/storytelling/StorytellingModal.tsx",
-        lineNumber: 237,
+        lineNumber: 210,
         columnNumber: 5
     }, this);
 }
-_s(StorytellingModal, "oYO5TWsV4Z/o+29sAPKwPgv1W8M=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"]
-    ];
-});
+_s(StorytellingModal, "uLKswtXbeuRInHRoOB6Ee7JXlbM=");
 _c = StorytellingModal;
 var _c;
 __turbopack_context__.k.register(_c, "StorytellingModal");

@@ -1596,7 +1596,7 @@ const translations = {
             brand: "Real Estate Sales Analytics",
             title: "Desempeño Comercial",
             subtitle: "Análisis de ingresos, eficiencia comercial y desempeño de ventas.",
-            storytelling: "Storytelling",
+            storytelling: "Storytelling (ES)",
             annualComparison: "Comparación Anual",
             yoy: "Variación YoY",
             cohortExplanation: "M0 = primera compra · 0% = periodo observado sin recompra · — = periodo aún no observable"
@@ -1693,38 +1693,7 @@ const translations = {
             cohortStoryTitle: "Oleadas de Recompra",
             cohortStorySubtitle: "¿Cuándo vuelven a comprar los clientes?",
             recommendationsTitle: "Conclusiones",
-            recommendationsSubtitle: "Principales oportunidades y acciones recomendadas.",
-            executiveSummary: {
-                totalRevenue: "Ingreso Total",
-                totalSales: "Ventas",
-                averageTicket: "Ticket Promedio",
-                totalCommission: "Comisión Total",
-                revenueTrendTitle: "Evolución de ingresos",
-                revenueTrendSubtitle: "Comportamiento mensual durante el periodo analizado.",
-                messageLabel: "Mensaje principal",
-                messageText: "El negocio generó un volumen sólido de ingresos durante el periodo analizado.",
-                findingLabel: "Hallazgo",
-                findingText: "Los ingresos presentan ciclos de crecimiento y desaceleración a lo largo del tiempo.",
-                questionLabel: "Siguiente pregunta",
-                questionText: "¿Qué ciudades, canales y tipos de propiedad explican mejor estos cambios?",
-                revenue: "Ingresos"
-            },
-            commercialPerformance: {
-                cityTitle: "Ingresos por Ciudad",
-                channelTitle: "Ingresos por Canal",
-                propertyTypeTitle: "Ingresos por Tipo de Propiedad",
-                revenue: "Ingresos",
-                findingLabel: "Hallazgo principal",
-                findingText: "El desempeño comercial está concentrado en determinados mercados, canales y tipos de propiedad.",
-                marketLabel: "Mercado líder",
-                marketText: "La ciudad con mayores ingresos es",
-                channelLabel: "Canal dominante",
-                channelText: "El canal con mayor generación de ingresos es",
-                portfolioLabel: "Portafolio",
-                portfolioText: "El tipo de propiedad con mayor contribución a los ingresos es",
-                implicationLabel: "Implicación",
-                implicationText: "Estos resultados permiten identificar dónde concentrar recursos comerciales, presupuesto y capacidad operativa."
-            }
+            recommendationsSubtitle: "Principales oportunidades y acciones recomendadas."
         }
     },
     en: {
@@ -1813,22 +1782,6 @@ const translations = {
             segmentRecommendation: "Use buyer segment as an additional signal in commercial models rather than treating it as the sole predictor of customer behavior."
         },
         storytelling: {
-            commercialPerformance: {
-                cityTitle: "Revenue by City",
-                channelTitle: "Revenue by Channel",
-                propertyTypeTitle: "Revenue by Property Type",
-                revenue: "Revenue",
-                findingLabel: "Key finding",
-                findingText: "Commercial performance is concentrated across specific markets, channels, and property types.",
-                marketLabel: "Leading market",
-                marketText: "The city generating the highest revenue is",
-                channelLabel: "Leading channel",
-                channelText: "The sales channel generating the highest revenue is",
-                portfolioLabel: "Portfolio",
-                portfolioText: "The property type contributing the most revenue is",
-                implicationLabel: "Implication",
-                implicationText: "These results help identify where commercial resources, budget, and operational capacity should be prioritized."
-            },
             modalTitle: "Data Storytelling",
             modalSubtitle: "Real Estate Sales Analytics",
             previous: "Previous",
@@ -1845,22 +1798,7 @@ const translations = {
             cohortStoryTitle: "Repurchase Waves",
             cohortStorySubtitle: "When do customers come back to buy again?",
             recommendationsTitle: "Conclusions",
-            recommendationsSubtitle: "Key opportunities and recommended actions.",
-            executiveSummary: {
-                totalRevenue: "Total Revenue",
-                totalSales: "Sales",
-                averageTicket: "Average Ticket",
-                totalCommission: "Total Commission",
-                revenueTrendTitle: "Revenue Trend",
-                revenueTrendSubtitle: "Monthly performance during the analyzed period.",
-                messageLabel: "Key message",
-                messageText: "The business generated a solid level of revenue during the analyzed period.",
-                findingLabel: "Finding",
-                findingText: "Revenue shows periods of growth and slowdown over time.",
-                questionLabel: "Next question",
-                questionText: "Which cities, channels, and property types best explain these changes?",
-                revenue: "Revenue"
-            }
+            recommendationsSubtitle: "Key opportunities and recommended actions."
         }
     }
 };

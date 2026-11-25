@@ -15,10 +15,6 @@ import type {
   RevenueByPropertyType,
 } from "@/lib/types";
 
-import {
-  useLanguage,
-} from "@/lib/i18n/LanguageContext";
-
 import ExecutiveSummarySlide from "./ExecutiveSummarySlide";
 import CommercialPerformanceSlide from "./CommercialPerformanceSlide";
 import BuyerProfileSlide from "./BuyerProfileSlide";
@@ -38,6 +34,47 @@ type StorytellingModalProps = {
   cohortRetention: CohortRetentionRow[];
 };
 
+const slides = [
+  {
+    id: "executive-summary",
+    title:
+      "Resumen Ejecutivo",
+    subtitle:
+      "Una visión general del desempeño comercial.",
+  },
+
+  {
+    id: "commercial-performance",
+    title:
+      "Desempeño Comercial",
+    subtitle:
+      "¿Qué mercados, canales y propiedades impulsan los ingresos?",
+  },
+
+  {
+    id: "buyer-profile",
+    title:
+      "Perfil del Comprador",
+    subtitle:
+      "¿Quiénes son nuestros clientes y cómo se comportan?",
+  },
+
+  {
+    id: "cohort-story",
+    title:
+      "Oleadas de Recompra",
+    subtitle:
+      "¿Cuándo vuelven a comprar los clientes?",
+  },
+
+  {
+    id: "recommendations",
+    title:
+      "Conclusiones",
+    subtitle:
+      "Principales oportunidades y acciones recomendadas.",
+  },
+];
 
 export default function StorytellingModal({
   isOpen,
@@ -50,76 +87,12 @@ export default function StorytellingModal({
   buyerProfiles,
   cohortRetention,
 }: StorytellingModalProps) {
-  const { t } =
-    useLanguage();
 
   const [
     currentSlide,
     setCurrentSlide,
   ] = useState(0);
 
-
-  const slides = [
-    {
-      id: "executive-summary",
-
-      title:
-        t.storytelling
-          .executiveSummaryTitle,
-
-      subtitle:
-        t.storytelling
-          .executiveSummarySubtitle,
-    },
-
-    {
-      id: "commercial-performance",
-
-      title:
-        t.storytelling
-          .commercialPerformanceTitle,
-
-      subtitle:
-        t.storytelling
-          .commercialPerformanceSubtitle,
-    },
-
-    {
-      id: "buyer-profile",
-
-      title:
-        t.storytelling
-          .buyerProfileTitle,
-
-      subtitle:
-        t.storytelling
-          .buyerProfileSubtitle,
-    },
-
-    {
-      id: "cohort-story",
-
-      title:
-        t.storytelling
-          .cohortStoryTitle,
-
-      subtitle:
-        t.storytelling
-          .cohortStorySubtitle,
-    },
-
-    {
-      id: "recommendations",
-
-      title:
-        t.storytelling
-          .recommendationsTitle,
-
-      subtitle:
-        t.storytelling
-          .recommendationsSubtitle,
-    },
-  ];
 
 
   const totalSlides =
@@ -238,9 +211,7 @@ export default function StorytellingModal({
       className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/80 p-4 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
-      aria-label={
-        t.storytelling.modalTitle
-      }
+      aria-label="Data storytelling"
     >
 
       <div className="flex max-h-[94vh] w-full max-w-7xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
@@ -252,17 +223,11 @@ export default function StorytellingModal({
           <div>
 
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              {
-                t.storytelling
-                  .modalTitle
-              }
+              Data Stotytelling
             </p>
 
             <p className="mt-1 text-sm text-gray-500">
-              {
-                t.storytelling
-                  .modalSubtitle
-              }
+              Real Estate Sales Analytics
             </p>
 
           </div>
@@ -271,9 +236,7 @@ export default function StorytellingModal({
           <div className="flex items-center gap-4">
 
             <span className="text-sm font-medium text-gray-500">
-              {t.storytelling.slide}{" "}
-              {currentSlide + 1}{" "}
-              {t.storytelling.of}{" "}
+              {currentSlide + 1} /{" "}
               {totalSlides}
             </span>
 
@@ -282,9 +245,7 @@ export default function StorytellingModal({
               type="button"
               onClick={onClose}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-xl text-gray-500 transition hover:bg-gray-100 hover:text-gray-900"
-              aria-label={
-                t.storytelling.close
-              }
+              aria-label="Cerrar storytelling"
             >
               ×
             </button>
@@ -394,11 +355,7 @@ export default function StorytellingModal({
             }
             className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30"
           >
-            ←{" "}
-            {
-              t.storytelling
-                .previous
-            }
+            ← Anterior
           </button>
 
 
@@ -425,10 +382,8 @@ export default function StorytellingModal({
                       ? "w-8 bg-gray-900"
                       : "w-2.5 bg-gray-300 hover:bg-gray-400"
                   }`}
-                  aria-label={`${t.storytelling.slide} ${
+                  aria-label={`Ir a diapositiva ${
                     index + 1
-                  }: ${
-                    slideItem.title
                   }`}
                 />
               )
@@ -447,11 +402,7 @@ export default function StorytellingModal({
             }
             className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-30"
           >
-            {
-              t.storytelling
-                .next
-            }{" "}
-            →
+            Siguiente →
           </button>
 
         </div>
