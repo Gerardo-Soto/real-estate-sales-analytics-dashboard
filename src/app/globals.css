@@ -38,7 +38,7 @@
     #6366f1,
     #225bd4,
     #0a1224,
-  );
+  );/* The last color should end with a comma*/
 
   transform:
     translate(-50%, -50%)

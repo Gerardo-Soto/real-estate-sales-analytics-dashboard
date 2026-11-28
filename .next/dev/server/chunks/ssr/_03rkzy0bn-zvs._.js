@@ -1,5 +1,4 @@
 module.exports = [
-(()=>{"use strict";return[
 "[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {
 "use strict";
 
@@ -46,6 +45,10 @@ function RootLayout({ children }) {
     }, this);
 }
 }),
+"[project]/src/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", (function(__turbopack_context__){
+
+__turbopack_context__.n(__turbopack_context__.i("[project]/src/app/layout.tsx [app-rsc] (ecmascript)"));
+}),
 "[project]/src/lib/i18n/LanguageContext.tsx [app-rsc] (client reference proxy)", ((__turbopack_context__) => {
 "use strict";
 
@@ -71,11 +74,6 @@ const useLanguage = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mod
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__ = __turbopack_context__.i("[project]/src/lib/i18n/LanguageContext.tsx [app-rsc] (client reference proxy)");
 ;
 __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2f$LanguageContext$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__);
-}),
-]})(),
-"[project]/src/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", (function(__turbopack_context__){
-
-__turbopack_context__.n(__turbopack_context__.i("[project]/src/app/layout.tsx [app-rsc] (ecmascript)"));
 }),
 ];
 
